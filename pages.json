@@ -7,12 +7,6 @@
 			}
 		},
 		{
-			"path": "pages/todayFlower/todayFlower",
-			"style": {
-				"navigationBarTitleText": "Flower Step"
-			}
-		},
-		{
 			"path": "pages/monthFlower/monthFlower",
 			"style": {
 				"navigationBarTitleText": "Flower Step"
@@ -30,5 +24,27 @@
 		"navigationBarTitleText": "Flower Step",
 		"navigationBarBackgroundColor": "#20c4ff",
 		"backgroundColor": "#ffffff"
+	},
+	"tabBar":{
+		"color":"#2e2e2e",
+		"selectedColor":"#d9d200",
+		"backgroundColor":"#ffffff",
+		"fontSize":"10px",
+		"height":"50px",
+		"iconWidth":"24px",
+		"list":[
+			{
+				"pagePath":"pages/index/index",
+				"iconPath":"static/images/flower.png",
+				"selectedIconPath":"static/images/floweractive.png",
+				"text":"今日"
+			},
+			{
+				"pagePath":"pages/achievement/achievement",
+				"iconPath":"static/images/book.png",
+				"selectedIconPath":"static/images/bookactive.png",
+				"text":"图鉴"
+			}
+		]
 	}
 }

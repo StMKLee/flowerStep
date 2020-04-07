@@ -3,7 +3,7 @@
 
 <template>
 	<view>
-		
+		图鉴
 	</view>
 </template>
 
