@@ -1,14 +1,34 @@
 {
-	"pages": [{
-		"path": "pages/index/index",
-		"style": {
-			"navigationBarTitleText": "uni-ui基础项目"
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "Flower Step"
+			}
+		},
+		{
+			"path": "pages/todayFlower/todayFlower",
+			"style": {
+				"navigationBarTitleText": "Flower Step"
+			}
+		},
+		{
+			"path": "pages/monthFlower/monthFlower",
+			"style": {
+				"navigationBarTitleText": "Flower Step"
+			}
+		},
+		{
+			"path": "pages/achievement/achievement",
+			"style": {
+				"navigationBarTitleText": "Flower Step"
+			}
 		}
-	}],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#007AFF",
-		"backgroundColor": "#FFFFFF"
+		"navigationBarTitleText": "Flower Step",
+		"navigationBarBackgroundColor": "#20c4ff",
+		"backgroundColor": "#ffffff"
 	}
 }

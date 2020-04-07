@@ -1,14 +1,16 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/todayFlower/todayFlower",
+    "pages/monthFlower/monthFlower",
+    "pages/achievement/achievement"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#007AFF",
-    "backgroundColor": "#FFFFFF"
+    "navigationBarTitleText": "Flower Step",
+    "navigationBarBackgroundColor": "#20c4ff",
+    "backgroundColor": "#ffffff"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

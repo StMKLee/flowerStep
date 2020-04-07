@@ -1,10 +1,9 @@
+
+<!-- 进入程序的第一页，展示logo等，点击屏幕进入todayFlower页。 -->
+
 <template>
 	<view class="container">
-		<view class="intro">本项目已包含uni ui组件，无需import和注册，可直接使用。在代码区键入字母u，即可通过代码助手列出所有可用组件。光标置于组件名称处按F1，即可查看组件文档。</view>
-		<view>测试修改</view>
-		<view>测试修改2</view>
-		<text class="intro">详见：</text>
-		<uni-link :href="href" :text="href"></uni-link>
+		
 	</view>
 </template>
 
@@ -12,7 +11,7 @@
 	export default {
 		data() {
 			return {
-				href: 'https://uniapp.dcloud.io/component/README?id=uniui'
+				
 			}
 		},
 		methods: {
@@ -22,9 +21,12 @@
 </script>
 
 <style>
-	.container {
-		padding: 20px;
-		font-size: 14px;
-		line-height: 24px;
+	*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;        /* 设置宽高尺寸为padding尺寸和border尺寸之和 */
+	}
+	.container{
+		
 	}
 </style>
