@@ -7,6 +7,7 @@ page{
 .container{
 	width: 750rpx;
 	min-height: 100vh;
+	height: 100vh;
 	padding-left: 25rpx;
 	padding-right: 25rpx;
 }
@@ -79,5 +80,19 @@ page{
 	width: 15px;
 	height: 15px;
 	margin-right: 10rpx;
+}
+.flowerex1{
+	position: absolute;
+	width: 80rpx;
+	height: 160rpx;
+	top: 60vh;
+	left: 30vw;
+}
+.flowerex2{
+	position: absolute;
+	width: 80rpx;
+	height: 160rpx;
+	top: 70vh;
+	left: 70vw;
 }
 

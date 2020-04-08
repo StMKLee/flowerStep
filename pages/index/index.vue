@@ -18,6 +18,8 @@
 			<view class="dateAndTime">       <!-- 日期时间 -->
 				{{year}}年{{month}}月{{day}}日&nbsp;&nbsp;{{hour}}:{{minute}}&nbsp;&nbsp;星期{{week}}
 			</view>
+			<image src="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5" class="flowerex1"></image>			<!-- 花例图1 -->
+			<image src="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5" class="flowerex2"></image>			<!-- 花例图2 -->
 		</view>
 	</view>
 </template>
@@ -72,7 +74,7 @@
 				}
 			},
 			gotomf:function(){
-				uni.redirectTo({
+				uni.navigateTo({
 					url:"../monthFlower/monthFlower"
 				})
 			}
@@ -94,6 +96,7 @@
 	.container{
 		width: 750rpx;
 		min-height: 100vh;
+		height: 100vh;
 		padding-left: 25rpx;
 		padding-right: 25rpx;
 	}
@@ -144,5 +147,19 @@
 		width: 15px;
 		height: 15px;
 		margin-right: 10rpx;
+	}
+	.flowerex1{
+		position: absolute;
+		width: 80rpx;
+		height: 160rpx;
+		top: 60vh;
+		left: 30vw;
+	}
+	.flowerex2{
+		position: absolute;
+		width: 80rpx;
+		height: 160rpx;
+		top: 70vh;
+		left: 70vw;
 	}
 </style>
