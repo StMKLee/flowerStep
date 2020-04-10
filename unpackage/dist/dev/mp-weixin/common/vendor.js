@@ -1685,9 +1685,9 @@ function normalizeComponent (
 /***/ }),
 
 /***/ 15:
-/*!***********************************************************!*\
-  !*** D:/work/Hbuilder/projects/flowerStep/store/index.js ***!
-  \***********************************************************/
+/*!************************************!*\
+  !*** D:/flowerStep/store/index.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8727,9 +8727,9 @@ module.exports = g;
 /***/ }),
 
 /***/ 4:
-/*!*******************************************************!*\
-  !*** D:/work/Hbuilder/projects/flowerStep/pages.json ***!
-  \*******************************************************/
+/*!********************************!*\
+  !*** D:/flowerStep/pages.json ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9625,10 +9625,10 @@ main();
 
 /***/ }),
 
-/***/ 54:
-/*!**************************************************************************!*\
-  !*** D:/work/Hbuilder/projects/flowerStep/components/uni-icons/icons.js ***!
-  \**************************************************************************/
+/***/ 59:
+/*!***************************************************!*\
+  !*** D:/flowerStep/components/uni-icons/icons.js ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9779,21 +9779,21 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ }),
 
 /***/ 7:
-/*!************************************************************************!*\
-  !*** D:/work/Hbuilder/projects/flowerStep/pages.json?{"type":"style"} ***!
-  \************************************************************************/
+/*!*************************************************!*\
+  !*** D:/flowerStep/pages.json?{"type":"style"} ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "Flower Step" }, "pages/monthFlower/monthFlower": { "navigationBarTitleText": "Flower Step" }, "pages/achievement/achievement": { "navigationBarTitleText": "Flower Step" } }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "Flower Step", "navigationBarBackgroundColor": "#20c4ff", "backgroundColor": "#ffffff" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "Flower Step" }, "pages/monthFlower/monthFlower": { "navigationBarTitleText": "Flower Step" }, "pages/achievement/achievement": { "navigationBarTitleText": "Flower Step" }, "pages/UserCenter/UserCenter": { "navigationBarTitleText": "Flower Step" } }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "Flower Step", "navigationBarBackgroundColor": "#20c4ff", "backgroundColor": "#ffffff" } };exports.default = _default;
 
 /***/ }),
 
 /***/ 8:
-/*!***********************************************************************!*\
-  !*** D:/work/Hbuilder/projects/flowerStep/pages.json?{"type":"stat"} ***!
-  \***********************************************************************/
+/*!************************************************!*\
+  !*** D:/flowerStep/pages.json?{"type":"stat"} ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
