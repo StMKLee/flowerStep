@@ -9785,7 +9785,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "Flower Step" }, "pages/monthFlower/monthFlower": { "navigationBarTitleText": "Flower Step" }, "pages/achievement/achievement": { "navigationBarTitleText": "Flower Step" } }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "Flower Step", "navigationBarBackgroundColor": "#20c4ff", "backgroundColor": "#ffffff" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "Flower Step", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/monthFlower/monthFlower": { "navigationBarTitleText": "Flower Step", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/achievement/achievement": { "navigationBarTitleText": "Flower Step", "usingComponents": { "uni-pagination": "/components/uni-pagination/uni-pagination" }, "usingAutoImportComponents": { "uni-pagination": "/components/uni-pagination/uni-pagination" } }, "pages/UserCenter/UserCenter": { "navigationBarTitleText": "Flower Step" } }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "Flower Step", "navigationBarBackgroundColor": "#20c4ff", "backgroundColor": "#ffffff" } };exports.default = _default;
 
 /***/ }),
 

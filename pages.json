@@ -17,8 +17,14 @@
 			"style": {
 				"navigationBarTitleText": "Flower Step"
 			}
-		}
-	],
+		},
+        {
+            "path" : "pages/UserCenter/UserCenter",
+            "style" : {
+				"navigationBarTitleText": "Flower Step"
+			}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "Flower Step",
@@ -40,10 +46,10 @@
 				"text":"今日"
 			},
 			{
-				"pagePath":"pages/achievement/achievement",
-				"iconPath":"static/images/book.png",
-				"selectedIconPath":"static/images/bookactive.png",
-				"text":"图鉴"
+				"pagePath":"pages/UserCenter/UserCenter",
+				"iconPath":"static/images/user.png",
+				"selectedIconPath":"static/images/user_active.png",
+				"text":"个人中心"
 			}
 		]
 	}

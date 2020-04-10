@@ -4,14 +4,6 @@
 <template>
 	<view class="container">
 		<view class="maincontent">			<!-- 主内容容器 -->
-			<view class="topcontent">		<!-- 顶部内容容器 -->
-				<view class="Logo">            <!-- Logo标 -->
-					Logo
-				</view>
-				<view class="monthflowers" @click="gotomf">		<!-- 进入花园页，有月总花数量 -->
-					<image src="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.CKIC98CLlv.x4mmPngl5.IoIs9BpZu3kT5g6Ykt5YSfdQzAgb6EpA.fvJQsNaxzg!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5" class="topflower"></image>进入我的花园
-				</view>
-			</view>
 			<view class="steps">            <!-- 步数 -->
 				1000
 			</view>
@@ -89,7 +81,7 @@
 		box-sizing: border-box;        /* 设置宽高尺寸为padding尺寸和border尺寸之和 */
 	}
 	page{
-		background-image: url("http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq3f4Y7iPfx46tWEvgQhztDVYa1XvlRj5Po5h5hmUgINjB8qxGNL4kQnkQRIro0eDfQ!!/mnull&bo=9AHlAgAAAAARByI!&rf=photolist&t=5");
+		background-image: url("http://m.qpic.cn/psc?/V10EvO2w4BqwM9/oGEovji5dOWVs5ze3TLFdg1oGwFW1S3sBPnp5cpHU3iMzUdH3tpJU8z98VuzZF0djr3kcpURN81BKjieWgSEQQ!!/b&bo=OATuBQAAAAARB.c!&rf=viewer_4");
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}

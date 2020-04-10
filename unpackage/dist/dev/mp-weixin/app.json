@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/monthFlower/monthFlower",
-    "pages/achievement/achievement"
+    "pages/achievement/achievement",
+    "pages/UserCenter/UserCenter"
   ],
   "subPackages": [],
   "window": {
@@ -26,13 +27,12 @@
         "text": "今日"
       },
       {
-        "pagePath": "pages/achievement/achievement",
-        "iconPath": "static/images/book.png",
-        "selectedIconPath": "static/images/bookactive.png",
-        "text": "图鉴"
+        "pagePath": "pages/UserCenter/UserCenter",
+        "iconPath": "static/images/user.png",
+        "selectedIconPath": "static/images/user_active.png",
+        "text": "个人中心"
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap53.json"
+  "usingComponents": {}
 }
