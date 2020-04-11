@@ -6,10 +6,10 @@
 		<view class="center_box_bg">
 			<view class="profily">
 				<view class="base">
-					<view class="profily_header">
-
+					<view class="profily_header" v-bind:style="{backgroundImage: 'url('+theHeadImgUrl+')'}">
+						
 					</view>
-					<text>昵称</text>
+					<text>{{theUsername}}</text>
 				</view>
 			</view>
 			<view class="baiban">
@@ -31,17 +31,17 @@
 			return {
 				menus: [{
 						name: '花朵图鉴',
-						icon: '../../static/images/图鉴.png',
+						icon: '../../static/images/tujian.png',
 						key: 1,
 					},
 					{
 						name: '个人成就',
-						icon: '../../static/images/成就.png',
+						icon: '../../static/images/chengjiu.png',
 						key: 2,
 					},
 					{
 						name: '月种植数',
-						icon: '../../static/images/种植.png',
+						icon: '../../static/images/zhongzhi.png',
 						key: 3,
 					},
 					{
@@ -59,20 +59,60 @@
 						icon: '../../static/images/10.png',
 						key: 6,
 					}
-
 				]
 			};
 		},
+		onLoad() {
+			
+		},
+		onShow() {
+			if(this.$store.state.userMess.length==0){		/* 如果用户信息未获取,则提示并返回首页 */
+				var that=this;
+				uni.showModal({
+					title:"登录提示",
+					content:"请先登录，点击确定返回首页",
+					showCancel:false,		/* 不显示取消按钮 */
+					success(res) {
+						console.log("提示成功");
+						if(res.confirm){
+							that.goBackIndex()
+						}
+					},
+					fail() {
+						console.log("提示失败")
+					}
+				})
+			}
+		},
 		methods: {
-
+			goBackIndex:function(){
+				uni.switchTab({
+					url:'../index/index',
+					success() {
+						console.log("返回成功")
+					},
+					fail() {
+						console.log("返回失败")
+					}
+				})
+			}
 		},
 		computed: {
-
+			theUsername(){
+				return this.$store.state.userMess.nickName;
+			},
+			theHeadImgUrl(){
+				return this.$store.state.userMess.avatarUrl;
+			}
 		}
 	}
 </script>
 
 <style lang="scss">
+	.touxiang{
+		width: 100rpx;
+		height: 100rpx;
+	}
 	page {
 		height: 100%;
 	}
@@ -87,7 +127,7 @@
 
 		&_top {
 			height: 18%;
-			background: url("http://m.qpic.cn/psc?/V10EvO2w4BqwM9/oGEovji5dOWVs5ze3TLFdu8xmOlGSBo1D57XEIzLBpnOcP3qJytAGtg.PTkXn4ZtvvyDZwwacUaFelRMK0kmbA!!/b&bo=oAU4BAAAAAARB6k!&rf=viewer_4") no-repeat 0% 50%;
+			background:url('http://m.qpic.cn/psc?/V10EvO2w4BqwM9/oGEovji5dOWVs5ze3TLFdu8xmOlGSBo1D57XEIzLBpnOcP3qJytAGtg.PTkXn4ZtvvyDZwwacUaFelRMK0kmbA!!/b&bo=oAU4BAAAAAARB6k!&rf=viewer_4') no-repeat 0% 50%;
 			background-size: cover;
 
 			// background: #E6E6E6;
@@ -125,7 +165,6 @@
 		.profily_header {
 			height: 120rpx;
 			width: 120rpx;
-			background-image: url(../../static/images/header.jpg);
 			background-size: 100%;
 		}
 

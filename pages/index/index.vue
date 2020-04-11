@@ -4,7 +4,12 @@
 <template>
 	<view class="container">
 		<view class="maincontent">			<!-- 主内容容器 -->
-			<view class="steps">            <!-- 步数 -->
+			<view class="shouquan" v-if="accessNo">			<!-- 初始授权用户信息 -->
+				<button open-type="getUserInfo" @getuserinfo="getUserMess" type="primary" size="mini">
+					登录
+				</button>
+			</view>
+			<view class="steps" v-if="!accessNo">            <!-- 步数 -->
 				1000
 			</view>
 			<view class="dateAndTime">       <!-- 日期时间 -->
@@ -26,8 +31,12 @@
 				day:null,
 				hour:null,
 				minute:null,
-				week:null
+				week:null,
+				accessNo:true
 			}
+		},
+		onLoad:function(){
+			this.checkAccess();		/* 调用检测权限方法 */
 		},
 		onShow:function(){
 			var _this=this;
@@ -65,9 +74,44 @@
 					this.week="六";
 				}
 			},
-			gotomf:function(){
-				uni.navigateTo({
-					url:"../monthFlower/monthFlower"
+			getUserMess:function(){		/* 获取用户信息(调用登录接口和用户信息接口) */
+				var that=this;
+				uni.login({
+					provider:'weixin',
+					success(Lres) {
+						console.log("login success");
+						uni.getUserInfo({
+							provider:'weixin',
+							success(Ires) {
+								console.log("getUserInfo success");
+								that.$store.state.userMess=Ires.userInfo;
+							},
+							fail() {
+								console.log("getUserInfo fail")
+							}
+						})
+					},
+					fail() {
+						console("login fail")
+					}
+				})
+			},
+			checkAccess:function(){
+				var that=this;
+				uni.getSetting({
+					success(res) {
+						if(res.authSetting['scope.userInfo']){		/* 用户信息已经授权 */
+							that.getUserMess();
+							that.accessNo=false;
+						}else if(!res.authSetting['scope.userInfo']){
+							that.accessNo=true;
+							uni.showModal({
+								title:"登录提示",
+								content:"请登录以授权",
+								showCancel:false
+							})
+						}
+					}
 				})
 			}
 		}
@@ -100,45 +144,15 @@
 		justify-content: center;
 		align-items: center;
 	}
-	.topcontent{
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		width: 750rpx;
-		height: auto;
-		padding-top: 7px;
-	}
 	.steps{
 		font-size: 110rpx;
-		margin-top: 8vh;
+		margin-top: 15vh;
 		color: #900000;
-	}
-	.Logo{
-		font-size: 50rpx;
-		color: #4CD964;
-		margin-left: 10px;
-	}
-	.monthflowers{
-		margin-right: 10px;
-		font-size: 25rpx;
-		display: flex;
-		align-items: center;
 	}
 	.dateAndTime{
 		font-size: 30rpx;
 		margin-top: 5vh;
 		color: #daa937;
-	}
-	.tip{
-		font-size: 30rpx;
-		margin-top: 32vh;
-		color: #4fc1f1;
-	}
-	.topflower{
-		width: 15px;
-		height: 15px;
-		margin-right: 10rpx;
 	}
 	.flowerex1{
 		position: absolute;
@@ -153,5 +167,8 @@
 		height: 160rpx;
 		top: 70vh;
 		left: 70vw;
+	}
+	.shouquan{
+		margin-top: 15vh;
 	}
 </style>

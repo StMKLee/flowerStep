@@ -28,58 +28,15 @@ page{
 	-webkit-align-items: center;
 	        align-items: center;
 }
-.topcontent{
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: row;
-	        flex-direction: row;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
-	width: 750rpx;
-	height: auto;
-	padding-top: 7px;
-}
 .steps{
 	font-size: 110rpx;
-	margin-top: 8vh;
+	margin-top: 15vh;
 	color: #900000;
-}
-.Logo{
-	font-size: 50rpx;
-	color: #4CD964;
-	margin-left: 10px;
-}
-.monthflowers{
-	margin-right: 10px;
-	font-size: 25rpx;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	        align-items: center;
 }
 .dateAndTime{
 	font-size: 30rpx;
 	margin-top: 5vh;
 	color: #daa937;
-}
-.tip{
-	font-size: 30rpx;
-	margin-top: 32vh;
-	color: #4fc1f1;
-}
-.topflower{
-	width: 15px;
-	height: 15px;
-	margin-right: 10rpx;
 }
 .flowerex1{
 	position: absolute;
@@ -94,5 +51,8 @@ page{
 	height: 160rpx;
 	top: 70vh;
 	left: 70vw;
+}
+.shouquan{
+	margin-top: 15vh;
 }
 

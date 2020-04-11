@@ -160,6 +160,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -170,8 +175,12 @@ var _default =
       day: null,
       hour: null,
       minute: null,
-      week: null };
+      week: null,
+      accessNo: true };
 
+  },
+  onLoad: function onLoad() {
+    this.checkAccess(); /* 调用检测权限方法 */
   },
   onShow: function onShow() {
     var _this = this;
@@ -209,9 +218,44 @@ var _default =
         this.week = "六";
       }
     },
-    gotomf: function gotomf() {
-      uni.navigateTo({
-        url: "../monthFlower/monthFlower" });
+    getUserMess: function getUserMess() {/* 获取用户信息(调用登录接口和用户信息接口) */
+      var that = this;
+      uni.login({
+        provider: 'weixin',
+        success: function success(Lres) {
+          console.log("login success");
+          uni.getUserInfo({
+            provider: 'weixin',
+            success: function success(Ires) {
+              console.log("getUserInfo success");
+              that.$store.state.userMess = Ires.userInfo;
+            },
+            fail: function fail() {
+              console.log("getUserInfo fail");
+            } });
+
+        },
+        fail: function fail() {
+          console("login fail");
+        } });
+
+    },
+    checkAccess: function checkAccess() {
+      var that = this;
+      uni.getSetting({
+        success: function success(res) {
+          if (res.authSetting['scope.userInfo']) {/* 用户信息已经授权 */
+            that.getUserMess();
+            that.accessNo = false;
+          } else if (!res.authSetting['scope.userInfo']) {
+            that.accessNo = true;
+            uni.showModal({
+              title: "登录提示",
+              content: "请登录以授权",
+              showCancel: false });
+
+          }
+        } });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
