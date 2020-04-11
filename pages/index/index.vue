@@ -32,7 +32,7 @@
 				hour:null,
 				minute:null,
 				week:null,
-				accessNo:true
+				accessNo:false
 			}
 		},
 		onLoad:function(){
