@@ -104,7 +104,7 @@
 				}
 				else if(index==1){
 					uni.navigateTo({
-					    url: 'test?id=1&name=uniapp'
+					    url: '../honor/honor'
 					});
 				}
 				else if(index==2){

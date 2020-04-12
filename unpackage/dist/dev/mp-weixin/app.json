@@ -1,12 +1,14 @@
 {
   "pages": [
+    "pages/firstpage/firstpage",
     "pages/index/index",
     "pages/monthFlower/monthFlower",
     "pages/achievement/achievement",
     "pages/UserCenter/UserCenter",
     "pages/about/about",
     "pages/help/help",
-    "pages/feedback/feedback"
+    "pages/feedback/feedback",
+    "pages/honor/honor"
   ],
   "subPackages": [],
   "window": {
@@ -37,5 +39,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap41.json"
 }

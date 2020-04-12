@@ -1,6 +1,10 @@
 {
 	"pages": [
 		{
+		    "path" : "pages/firstpage/firstpage",
+		    "style" : {}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "Flower Step"
@@ -42,6 +46,10 @@
 		    	"navigationBarTitleText": "Flower Step"
 		    }
 		}
+        ,{
+            "path" : "pages/honor/honor",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",

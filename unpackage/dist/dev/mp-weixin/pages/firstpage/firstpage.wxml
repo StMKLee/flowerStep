@@ -1,0 +1,1 @@
+<view><view class="plant"><button type="default" data-event-opts="{{[['tap',[['jumpto',['$event']]]]]}}" bindtap="__e">Plant</button></view></view>
