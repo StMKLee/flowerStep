@@ -229,6 +229,7 @@ var _default =
             success: function success(Ires) {
               console.log("getUserInfo success");
               that.$store.state.userMess = Ires.userInfo;
+              that.accessNo = false;
             },
             fail: function fail() {
               console.log("getUserInfo fail");
