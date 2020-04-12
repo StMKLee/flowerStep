@@ -1,11 +1,13 @@
 <template>
 	<view class="container">
-		<view class="title">
-			使用帮助
-		</view>
-		<view class="helptext">
-			帮助详细内容
-		</view>
+		<uni-list>
+		    <uni-list-item title="帮助中心" :show-arrow="false" disabled="true"></uni-list-item>
+		    <uni-list-item title="权限设置"></uni-list-item>
+		    <uni-list-item title="待定"></uni-list-item>
+			<uni-list-item title="待定"></uni-list-item>
+			<uni-list-item title="待定"></uni-list-item>
+		</uni-list>
+		
 	</view>
 </template>
 
@@ -23,16 +25,5 @@
 </script>
 
 <style>
-	page{
-		background-color: rgb(248,248,248);
-	}
-	.container{
-		margin: 20upx;
-		box-shadow: 8upx 8upx 4upx #888888;
-		
-	}
-	.title{
-		text-align: center;
-		font-size: 40upx;
-	}
+
 </style>

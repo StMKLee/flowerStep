@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "Flower Step",
+  "usingComponents": {
+    "uni-card": "/components/uni-card/uni-card"
+  }
 }

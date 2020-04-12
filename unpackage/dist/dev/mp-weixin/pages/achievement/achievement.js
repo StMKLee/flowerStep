@@ -95,7 +95,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   "uni-pagination": function() {
-    return __webpack_require__.e(/*! import() | components/uni-pagination/uni-pagination */ "components/uni-pagination/uni-pagination").then(__webpack_require__.bind(null, /*! @/components/uni-pagination/uni-pagination.vue */ 47))
+    return __webpack_require__.e(/*! import() | components/uni-pagination/uni-pagination */ "components/uni-pagination/uni-pagination").then(__webpack_require__.bind(null, /*! @/components/uni-pagination/uni-pagination.vue */ 69))
   }
 }
 var render = function() {
@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniPagination = function uniPagination() {__webpack_require__.e(/*! require.ensure | components/uni-pagination/uni-pagination */ "components/uni-pagination/uni-pagination").then((function () {return resolve(__webpack_require__(/*! ../../components/uni-pagination/uni-pagination.vue */ 47));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniPagination = function uniPagination() {__webpack_require__.e(/*! require.ensure | components/uni-pagination/uni-pagination */ "components/uni-pagination/uni-pagination").then((function () {return resolve(__webpack_require__(/*! ../../components/uni-pagination/uni-pagination.vue */ 69));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 

@@ -16,7 +16,7 @@
 
 			</view>
 			<view class="center_menu">
-				<view class="menu_item" v-for="(item, index) in menus" :key="index">
+				<view class="menu_item" v-for="(item, index) in menus" :key="index" @click="jumpto(index)">
 					<image :src="item.icon" mode="aspectFill"></image>
 					<text>{{item.name}}</text>
 				</view>
@@ -95,6 +95,38 @@
 						console.log("返回失败")
 					}
 				})
+			},
+			jumpto:function(index){
+				if(index==0){
+					uni.navigateTo({
+					    url: '../achievement/achievement'
+					});
+				}
+				else if(index==1){
+					uni.navigateTo({
+					    url: 'test?id=1&name=uniapp'
+					});
+				}
+				else if(index==2){
+					uni.navigateTo({
+					    url: '../monthFlower/monthFlower'
+					});
+				}
+				else if(index==3){
+					uni.navigateTo({
+					    url: '../help/help'
+					});
+				}
+				else if(index==4){
+					uni.navigateTo({
+					    url: '../feedback/feedback'
+					});
+				}
+				else if(index==5){
+					uni.navigateTo({
+					    url: '../about/about'
+					});
+				}
 			}
 		},
 		computed: {

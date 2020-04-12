@@ -23,19 +23,25 @@
             "style" : {
 				"navigationBarTitleText": "Flower Step"
 			}
-        }
-        ,{
+        },
+        {
             "path" : "pages/about/about",
-            "style" : {}
-        }
-        ,{
+            "style" : {
+            	"navigationBarTitleText": "Flower Step"
+            }
+        },
+        {
             "path" : "pages/help/help",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/feedback/feedback",
-            "style" : {}
-        }
+            "style" : {
+            	"navigationBarTitleText": "Flower Step"
+            }
+        },
+		{
+		    "path" : "pages/feedback/feedback",
+		    "style" : {
+		    	"navigationBarTitleText": "Flower Step"
+		    }
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
