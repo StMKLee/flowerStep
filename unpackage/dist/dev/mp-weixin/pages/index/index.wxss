@@ -33,6 +33,12 @@ page{
 	margin-top: 15vh;
 	color: #900000;
 }
+.istip{
+	font-size: 50rpx;
+	margin-top: 15vh;
+	color: #900000;
+	text-align: center;
+}
 .dateAndTime{
 	font-size: 30rpx;
 	margin-top: 5vh;

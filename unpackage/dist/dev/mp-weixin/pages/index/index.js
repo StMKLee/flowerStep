@@ -176,7 +176,9 @@ var _default =
       hour: null,
       minute: null,
       week: null,
-      accessNo: false };
+      accessNo: false,
+      showStep: "",
+      stepclass: "steps" };
 
   },
   onLoad: function onLoad() {
@@ -254,6 +256,14 @@ var _default =
               content: "请登录以授权",
               showCancel: false });
 
+          };
+          if (res.authSetting['scope.werun']) {/* 步数已经授权 */
+            that.showStep = "500";
+            that.stepclass = "steps";
+            console.log("stepAcess success");
+          } else if (!res.authSetting['scope.werun']) {
+            that.showStep = "请在 个人中心->帮助中心->权限设置 里打开微信步数权限";
+            that.stepclass = "istip";
           }
         } });
 

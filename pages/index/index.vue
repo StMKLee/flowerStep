@@ -9,8 +9,8 @@
 					登录
 				</button>
 			</view>
-			<view class="steps" v-if="!accessNo">            <!-- 步数 -->
-				1000
+			<view v-if="!accessNo" :class="stepclass">            <!-- 步数 -->
+				{{showStep}}
 			</view>
 			<view class="dateAndTime">       <!-- 日期时间 -->
 				{{year}}年{{month}}月{{day}}日&nbsp;&nbsp;{{hour}}:{{minute}}&nbsp;&nbsp;星期{{week}}
@@ -32,7 +32,9 @@
 				hour:null,
 				minute:null,
 				week:null,
-				accessNo:false
+				accessNo:false,
+				showStep:"",
+				stepclass:"steps"
 			}
 		},
 		onLoad:function(){
@@ -110,6 +112,14 @@
 								content:"请登录以授权",
 								showCancel:false
 							})
+						};
+						if(res.authSetting['scope.werun']){		/* 步数已经授权 */
+							that.showStep="500";
+							that.stepclass="steps";
+							console.log("stepAcess success");
+						}else if(!res.authSetting['scope.werun']){
+							that.showStep="请在 个人中心->帮助中心->权限设置 里打开微信步数权限";
+							that.stepclass="istip";
 						}
 					}
 				})
@@ -148,6 +158,12 @@
 		font-size: 110rpx;
 		margin-top: 15vh;
 		color: #900000;
+	}
+	.istip{
+		font-size: 50rpx;
+		margin-top: 15vh;
+		color: #900000;
+		text-align: center;
 	}
 	.dateAndTime{
 		font-size: 30rpx;
