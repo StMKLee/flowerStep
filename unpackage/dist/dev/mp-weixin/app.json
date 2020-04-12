@@ -3,7 +3,10 @@
     "pages/index/index",
     "pages/monthFlower/monthFlower",
     "pages/achievement/achievement",
-    "pages/UserCenter/UserCenter"
+    "pages/UserCenter/UserCenter",
+    "pages/about/about",
+    "pages/help/help",
+    "pages/feedback/feedback"
   ],
   "subPackages": [],
   "window": {
@@ -34,6 +37,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap80.json"
+  "usingComponents": {}
 }

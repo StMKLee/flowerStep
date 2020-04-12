@@ -24,6 +24,18 @@
 				"navigationBarTitleText": "Flower Step"
 			}
         }
+        ,{
+            "path" : "pages/about/about",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/help/help",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/feedback/feedback",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",

@@ -1,0 +1,13 @@
+
+page{
+	background-color: rgb(248,248,248);
+}
+.container{
+	margin: 20rpx;
+	box-shadow: 8rpx 8rpx 4rpx #888888;
+}
+.title{
+	text-align: center;
+	font-size: 40rpx;
+}
+
