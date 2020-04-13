@@ -2,6 +2,15 @@
 export default {
 	onLaunch: function() {
 		console.log('App Launch');
+		if(!wx.cloud) {
+			console.error("云能力未开通");
+		}else {		/* 云初始化 */
+			wx.cloud.init({
+				traceUser: true,
+				env: 'fsc-theid'
+			});
+			console.log("云能力已开通");
+		}
 	},
 	onShow: function() {
 		console.log('App Show');
