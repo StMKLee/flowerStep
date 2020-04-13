@@ -10,9 +10,8 @@
 	"libVersion": "2.9.2",
 	"appid": "wxd0fe103140dfe610",
 	"projectname": "flowerStep",
-	"cloudfunctionRoot": "cloundfunctions/",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
+	"cloudfunctionRoot": "cloudfunctions/",
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,

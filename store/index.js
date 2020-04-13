@@ -7,7 +7,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state:{
 		userMess:[],
-		stepMess:[]
+		stepMess:null
 	},
 	mutations:{
 		

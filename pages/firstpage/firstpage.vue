@@ -19,6 +19,9 @@
 				    url: '/pages/index/index'
 				});
 			}
+		},
+		onLoad() {
+			
 		}
 	}
 </script>

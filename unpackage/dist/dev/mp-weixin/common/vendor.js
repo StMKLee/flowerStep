@@ -1843,7 +1843,7 @@ _vue.default.use(_vuex.default);
 var store = new _vuex.default.Store({
   state: {
     userMess: [],
-    stepMess: [] },
+    stepMess: null },
 
   mutations: {},
 

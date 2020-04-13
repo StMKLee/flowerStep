@@ -162,7 +162,11 @@ var _default =
       uni.switchTab({
         url: '/pages/index/index' });
 
-    } } };exports.default = _default;
+    } },
+
+  onLoad: function onLoad() {
+
+  } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

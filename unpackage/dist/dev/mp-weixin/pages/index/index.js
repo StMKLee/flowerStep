@@ -170,10 +170,14 @@ var _default =
       stepclass: "steps" };
 
   },
+  computed: {},
+
+
   onLoad: function onLoad() {
-    this.checkAccess(); /* 调用检测权限方法 */
+
   },
   onShow: function onShow() {
+    this.checkAccess(); /* 调用检测权限方法 */
     var _this = this;
     _this.getTheDateTime(); /* 初始化先执行一次时间获取方法 */
     setInterval(function () {/* 一秒执行一次时间获取方法 */
@@ -220,6 +224,7 @@ var _default =
             success: function success(Ires) {
               console.log("getUserInfo success");
               that.$store.state.userMess = Ires.userInfo;
+              that.accessNo = false;
             },
             fail: function fail() {
               console.log("getUserInfo fail");
@@ -247,9 +252,8 @@ var _default =
 
           };
           if (res.authSetting['scope.werun']) {/* 步数已经授权 */
-            that.showStep = "500";
+            that.showStep = that.$store.state.stepMess[30].step; //获取今日步数
             that.stepclass = "steps";
-            console.log("stepAcess success");
           } else if (!res.authSetting['scope.werun']) {
             that.showStep = "请在 个人中心->帮助中心->权限设置 里打开微信步数权限";
             that.stepclass = "istip";

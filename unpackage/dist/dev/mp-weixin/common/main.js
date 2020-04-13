@@ -95,7 +95,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
 {
   onLaunch: function onLaunch() {
     console.log('App Launch');
@@ -107,14 +107,73 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
         env: 'fsc-theid' });
 
       console.log("云能力已开通");
-    }
+    };
+    uni.authorize({
+      scope: 'scope.werun',
+      success: function success() {
+        console.log("授权接口调用成功");
+        wx.getWeRunData({
+          success: function success(res) {
+            var cloudid = res.cloudID;
+            wx.cloud.callFunction({
+              name: 'myFunction',
+              data: {
+                weRunData: wx.cloud.CloudID(cloudid) },
+
+              success: function success(res) {
+                console.log("调用云函数成功");
+                that.$store.state.stepMess = res.result.event.weRunData.data.stepInfoList;
+              } });
+
+          } });
+
+      },
+      fail: function fail() {
+        console.log("授权接口调用失败");
+      } });
+
   },
   onShow: function onShow() {
     console.log('App Show');
+    var that = this;
+    uni.getSetting({ /* 用于应用显示时检测权限 */
+      success: function success(res) {
+        if (res.authSetting['scope.userInfo']) {
+          uni.login({
+            provider: 'weixin',
+            success: function success(Lres) {
+              uni.getUserInfo({
+                provider: 'weixin',
+                success: function success(Ires) {
+                  that.$store.state.userMess = Ires.userInfo;
+                } });
+
+            } });
+
+        };
+        if (res.authSetting['scope.werun']) {
+          wx.getWeRunData({
+            success: function success(res) {
+              var cloudid = res.cloudID;
+              wx.cloud.callFunction({
+                name: 'myFunction',
+                data: {
+                  weRunData: wx.cloud.CloudID(cloudid) },
+
+                success: function success(res) {
+                  that.$store.state.stepMess = res.result.event.weRunData.data.stepInfoList;
+                } });
+
+            } });
+
+        }
+      } });
+
   },
   onHide: function onHide() {
     console.log('App Hide');
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 12 */
