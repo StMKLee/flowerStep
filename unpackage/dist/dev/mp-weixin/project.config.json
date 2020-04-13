@@ -11,7 +11,8 @@
 	"appid": "wxd0fe103140dfe610",
 	"projectname": "flowerStep",
 	"cloudfunctionRoot": "cloudfunctions/",
-	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

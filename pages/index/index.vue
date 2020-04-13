@@ -10,13 +10,11 @@
 				</button>
 			</view>
 			<view v-if="!accessNo" :class="stepclass">            <!-- 步数 -->
-				{{showStep}}
+				今日步数：{{showStep}}
 			</view>
 			<view class="dateAndTime">       <!-- 日期时间 -->
 				{{year}}年{{month}}月{{day}}日&nbsp;&nbsp;{{hour}}:{{minute}}&nbsp;&nbsp;星期{{week}}
 			</view>
-			<image src="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5" class="flowerex1"></image>			<!-- 花例图1 -->
-			<image src="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5" class="flowerex2"></image>			<!-- 花例图2 -->
 		</view>
 	</view>
 </template>
@@ -34,7 +32,8 @@
 				week:null,
 				accessNo:false,
 				showStep:"",
-				stepclass:"steps"
+				stepclass:"steps",
+				plantnum:null
 			}
 		},
 		computed:{
@@ -121,12 +120,21 @@
 						if(res.authSetting['scope.werun']){		/* 步数已经授权 */
 							that.showStep=that.$store.state.stepMess[30].step;	//获取今日步数
 							that.stepclass="steps";
+							that.getplantnum();
 						}else if(!res.authSetting['scope.werun']){
 							that.showStep="请在 个人中心->帮助中心->权限设置 里打开微信步数权限";
 							that.stepclass="istip";
 						}
 					}
 				})
+			},
+			getplantnum:function(){
+				var i=0;
+				this.plantnum=parseInt(this.showStep/1000);
+				if(this.plantnum){
+					for(;i<this.plantnum;i++)
+					console.log(i)
+				}
 			}
 		}
 	}
@@ -159,9 +167,10 @@
 		align-items: center;
 	}
 	.steps{
-		font-size: 110rpx;
-		margin-top: 15vh;
-		color: #900000;
+		font-size: 30rpx;
+		position: fixed;
+		left: 0;
+		color: #A5FECB;
 	}
 	.istip{
 		font-size: 50rpx;
@@ -171,8 +180,8 @@
 	}
 	.dateAndTime{
 		font-size: 30rpx;
-		margin-top: 5vh;
-		color: #daa937;
+		margin-top: 10vh;
+		color: #f64f59;
 	}
 	.flowerex1{
 		position: absolute;

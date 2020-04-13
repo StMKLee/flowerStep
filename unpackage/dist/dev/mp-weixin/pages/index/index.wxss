@@ -29,9 +29,10 @@ page{
 	        align-items: center;
 }
 .steps{
-	font-size: 110rpx;
-	margin-top: 15vh;
-	color: #900000;
+	font-size: 30rpx;
+	position: fixed;
+	left: 0;
+	color: #A5FECB;
 }
 .istip{
 	font-size: 50rpx;
@@ -41,8 +42,8 @@ page{
 }
 .dateAndTime{
 	font-size: 30rpx;
-	margin-top: 5vh;
-	color: #daa937;
+	margin-top: 10vh;
+	color: #f64f59;
 }
 .flowerex1{
 	position: absolute;
