@@ -4,7 +4,7 @@ export default {
 		console.log('App Launch');
 		if(!wx.cloud) {
 			console.error("云能力未开通");
-		}else {		/* 云初始化 */
+		}else if(wx.cloud) {		/* 云初始化 */
 			wx.cloud.init({
 				traceUser: true,
 				env: 'fsc-theid'
