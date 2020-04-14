@@ -13,7 +13,7 @@
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "Flower Step",
+    "navigationBarTitleText": "FlowersStep",
     "navigationBarBackgroundColor": "#20c4ff",
     "backgroundColor": "#ffffff"
   },
@@ -40,5 +40,5 @@
     ]
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap57.json"
+  "sitemapLocation": "sitemap49.json"
 }

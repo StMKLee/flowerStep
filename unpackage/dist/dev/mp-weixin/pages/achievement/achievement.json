@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "Flower Step",
+  "navigationBarTitleText": "FlowersStep",
   "usingComponents": {
     "uni-pagination": "/components/uni-pagination/uni-pagination"
   }
