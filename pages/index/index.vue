@@ -42,6 +42,9 @@
 		onLoad:function(){
 			
 		},
+		onReady:function(){
+			
+		},
 		onShow:function(){
 			this.checkAccess();		/* 调用检测权限方法 */
 			var _this=this;
@@ -118,23 +121,26 @@
 							})
 						};
 						if(res.authSetting['scope.werun']){		/* 步数已经授权 */
-							that.showStep=that.$store.state.stepMess[30].step;	//获取今日步数
+							//获取今日步数
+							uni.showLoading({
+								title:"加载中，请稍等",
+								mask:true,
+								success() {
+									console.log("Loading成功")
+								},
+								fail() {
+									console.log("Loading失败")
+								}
+							});
+							that.showStep=that.$store.state.stepMess[that.$store.state.stepMess.length-1].step;	
 							that.stepclass="steps";
-							that.getplantnum();
+							uni.hideLoading();
 						}else if(!res.authSetting['scope.werun']){
-							that.showStep="请在 个人中心->帮助中心->权限设置 里打开微信步数权限";
+							that.showStep="请在 个人中心->帮助与反馈->权限设置 里打开微信步数权限";
 							that.stepclass="istip";
 						}
 					}
 				})
-			},
-			getplantnum:function(){
-				var i=0;
-				this.plantnum=parseInt(this.showStep/1000);
-				if(this.plantnum){
-					for(;i<this.plantnum;i++)
-					console.log(i)
-				}
 			}
 		}
 	}
