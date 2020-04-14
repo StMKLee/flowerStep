@@ -16,6 +16,9 @@
 				{{year}}年{{month}}月{{day}}日&nbsp;&nbsp;{{hour}}:{{minute}}&nbsp;&nbsp;星期{{week}}
 			</view>
 		</view>
+		<view>		<!-- 展示花的view -->
+			
+		</view>
 	</view>
 </template>
 
