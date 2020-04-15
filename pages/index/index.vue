@@ -316,7 +316,6 @@
 				}else if(this.showStep<1000){
 					this.flowernum=0;
 				};
-				this.getflowers();
 				console.log("今日有花："+this.flowernum);
 			},
 			getflowers:function(){		/* 根据花数量获取花,包括产生随机位置等 */
