@@ -2,6 +2,7 @@
 export default {
 	onLaunch: function() {
 		console.log('App Launch');
+		var that=this;
 		if(!wx.cloud) {
 			console.error("云能力未开通");
 		}else if(wx.cloud) {		/* 云初始化 */

@@ -6,7 +6,7 @@
 		<view class="center_box_bg">
 			<view class="profily">
 				<view class="base">
-					<view class="profily_header" v-bind:style="{backgroundImage: 'url('+theHeadImgUrl+')'}">
+					<view class="profily_header" v-if="theHeadImgUrl" v-bind:style="{backgroundImage: 'url('+theHeadImgUrl+')'}">
 						
 					</view>
 					<text>{{theUsername}}</text>
