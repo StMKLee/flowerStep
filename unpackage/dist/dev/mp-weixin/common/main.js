@@ -151,6 +151,34 @@ __webpack_require__.r(__webpack_exports__);
 
             } });
 
+          wx.cloud.callFunction({
+            name: 'myFunction',
+            success: function success(res) {
+              that.$store.state.userid = res.result.openid;
+              console.log("用户凭证获取成功");
+              var db = wx.cloud.database();
+              var appU = db.collection('appUsers');
+              appU.where({
+                _openid: that.$store.state.userid }).
+
+              get({
+                success: function success(res) {
+                  if (res.data.length == 0) {
+                    console.log("未找到相应记录");
+                    appU.add({
+                      data: {
+                        todayFlo: [],
+                        hasFlo: [] } });
+
+
+                  } else {
+                    console.log("找到了相应记录");
+                    that.$store.state.userData = res.data;
+                  }
+                } });
+
+            } });
+
         };
         if (res.authSetting['scope.werun']) {
           wx.getWeRunData({

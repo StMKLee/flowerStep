@@ -176,7 +176,7 @@ var _default =
       flowerdonghua: null,
       flowernum: 0, /* 花数量 */
       donghuazt: 0, /* 代表动画状态,0是正在变大,1是正在变小 */
-      allflowers: [],
+      allflowers: [], /* 今日的花 */
       areaUsed: [/* 区域的使用状况 */
       {
         id: 0,
