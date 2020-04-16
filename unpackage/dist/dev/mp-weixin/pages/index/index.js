@@ -305,12 +305,13 @@ var _default =
 
 
   onLoad: function onLoad() {
-    this.checkAccess(); /* 调用检测权限方法 */
+
   },
   onReady: function onReady() {
 
   },
   onShow: function onShow() {
+    this.checkAccess(); /* 调用检测权限方法 */
     this.tranflowers(); /* 调用花变大变小方法 */
     var _this = this;
     _this.getTheDateTime(); /* 初始化先执行一次时间获取方法 */
