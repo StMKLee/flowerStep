@@ -21,5 +21,8 @@
 </script>
 
 <style>
-
+page{
+	background-color: #81C7D4;
+	color: #FFFFFF;
+}
 </style>

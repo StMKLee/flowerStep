@@ -10,7 +10,7 @@
 				</button>
 			</view>
 			<view v-if="!accessNo" :class="stepclass">            <!-- 步数 -->
-				今日步数：{{showStep}}
+				{{showStep}}
 			</view>
 			<view class="dateAndTime">       <!-- 日期时间 -->
 				{{year}}年{{month}}月{{day}}日&nbsp;&nbsp;{{hour}}:{{minute}}&nbsp;&nbsp;星期{{week}}
@@ -265,7 +265,7 @@
 									console.log("Loading失败")
 								}
 							});
-							that.showStep=that.$store.state.stepMess[that.$store.state.stepMess.length-1].step;
+							that.showStep="今日步数：" + that.$store.state.stepMess[that.$store.state.stepMess.length-1].step;
 							that.stepTime=that.$store.state.stepMess[that.$store.state.stepMess.length-1].timestamp;
 							that.stepclass="steps";
 							that.howmanyFlowers();
@@ -360,7 +360,7 @@
 		box-sizing: border-box;        /* 设置宽高尺寸为padding尺寸和border尺寸之和 */
 	}
 	page{
-		background-image: url("http://m.qpic.cn/psc?/V10EvO2w4BqwM9/oGEovji5dOWVs5ze3TLFdg1oGwFW1S3sBPnp5cpHU3iMzUdH3tpJU8z98VuzZF0djr3kcpURN81BKjieWgSEQQ!!/b&bo=OATuBQAAAAARB.c!&rf=viewer_4");
+		background-image: url("http://m.qpic.cn/psc?/V10EvO2w25d0S7/oGEovji5dOWVs5ze3TLFdiaQr5caRIwnXnk.OKSuhAFA5Ht3DET9KMv4hopjHjkcnuM04ov.VH9cxpbkSMI7bA!!/b&bo=OASABwAAAAADB5k!&rf=viewer_4");
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -383,18 +383,19 @@
 		font-size: 30rpx;
 		position: fixed;
 		left: 0;
-		color: #A5FECB;
+		top: 0;
+		color: #33A6B8;
 	}
 	.istip{
-		font-size: 50rpx;
+		font-size: 30rpx;
 		margin-top: 15vh;
 		color: #900000;
 		text-align: center;
 	}
 	.dateAndTime{
-		font-size: 30rpx;
-		margin-top: 10vh;
-		color: #f64f59;
+		font-size: 40rpx;
+		margin-top: 15vh;
+		color: #33A6B8;
 	}
 	.shouquan{
 		margin-top: 15vh;
