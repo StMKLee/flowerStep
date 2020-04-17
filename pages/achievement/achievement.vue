@@ -10,7 +10,7 @@
 				<view class="flowertip">{{item.name}}</view>
 			</view>
 			<view class="pagination">
-				<uni-pagination show-icon="true" current="1" pageSize="6" total="13" @change="choosepage"></uni-pagination>
+				<uni-pagination show-icon="true" current="1" pageSize="6" total="12" @change="choosepage"></uni-pagination>
 			</view>
 		</view>
 	</view>
@@ -31,8 +31,20 @@
 						show:true
 					},
 					{
-						name:"a花",
-						imgsrc:"http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq*nvGtgEsPpmtWJpEXzLGbHExZjQxIdBsW.NWUCJs9JWlkZyGegJZ37J3xMxguRaKg!!/mnull&bo=igIVBQAAAAARB6g!&rf=photolist&t=5",
+						name:"未解锁",
+						imgsrc:"http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2tfsEtcr8zS*gsd6XmLwZ7*d83TAq1RTe4gTvYw3sgSgX*qCjstR7vD0MjghQ2o0A!!/mnull&bo=ywDIAAAAAAADByE!&rf=photolist&t=5",
+						page:1,
+						show:true
+					},
+					{
+						name:"未解锁",
+						imgsrc:"http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2tfsEtcr8zS*gsd6XmLwZ7*d83TAq1RTe4gTvYw3sgSgX*qCjstR7vD0MjghQ2o0A!!/mnull&bo=ywDIAAAAAAADByE!&rf=photolist&t=5",
+						page:1,
+						show:true
+					},
+					{
+						name:"未解锁",
+						imgsrc:"http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2tfsEtcr8zS*gsd6XmLwZ7*d83TAq1RTe4gTvYw3sgSgX*qCjstR7vD0MjghQ2o0A!!/mnull&bo=ywDIAAAAAAADByE!&rf=photolist&t=5",
 						page:1,
 						show:true
 					},
@@ -49,18 +61,6 @@
 						show:true
 					},
 					{
-						name:"b花",
-						imgsrc:"http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqwyleKOjY5g0J5WvV3eloONac1jmG9JC9lU0MK0CyY4cA1NxrLXn6mPWBzsI2ZqRWw!!/mnull&bo=igIEAwAAAAARB78!&rf=photolist&t=5",
-						page:1,
-						show:true
-					},
-					{
-						name:"未解锁",
-						imgsrc:"http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2tfsEtcr8zS*gsd6XmLwZ7*d83TAq1RTe4gTvYw3sgSgX*qCjstR7vD0MjghQ2o0A!!/mnull&bo=ywDIAAAAAAADByE!&rf=photolist&t=5",
-						page:1,
-						show:true
-					},
-					{
 						name:"未解锁",
 						imgsrc:"http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2tfsEtcr8zS*gsd6XmLwZ7*d83TAq1RTe4gTvYw3sgSgX*qCjstR7vD0MjghQ2o0A!!/mnull&bo=ywDIAAAAAAADByE!&rf=photolist&t=5",
 						page:2,
@@ -94,12 +94,6 @@
 						name:"未解锁",
 						imgsrc:"http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2tfsEtcr8zS*gsd6XmLwZ7*d83TAq1RTe4gTvYw3sgSgX*qCjstR7vD0MjghQ2o0A!!/mnull&bo=ywDIAAAAAAADByE!&rf=photolist&t=5",
 						page:2,
-						show:false
-					},
-					{
-						name:"未解锁",
-						imgsrc:"http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2tfsEtcr8zS*gsd6XmLwZ7*d83TAq1RTe4gTvYw3sgSgX*qCjstR7vD0MjghQ2o0A!!/mnull&bo=ywDIAAAAAAADByE!&rf=photolist&t=5",
-						page:3,
 						show:false
 					}
 				]
@@ -114,10 +108,40 @@
 						this.flowersbook[i].show=false;
 					}
 				}
+			},
+			getUserAchie:function(){	/* 获取用户数据库图鉴数据并解析 */
+				var imgsrcls=this.$store.state.userData.hasFlo;
+				console.log(imgsrcls);
+				if(imgsrcls!==undefined){
+					for (var i=0;i<imgsrcls.length;i++) {
+						let ifAchie=0;		/* 状态,等于0代表本地无相同的此imgsrc,则必须调用新花方法 */
+						for (var j=0;j<this.flowersbook.length;j++) {
+							if(this.flowersbook[j].imgsrc==imgsrcls[i]){
+								ifAchie+=1;
+							}else{
+								continue;
+							}
+						};
+						if(ifAchie!=0){
+							continue;
+						}else{
+							this.getNew(imgsrcls[i]);
+						}
+					}
+				}
+			},
+			getNew:function(e){		/* 获取图鉴新解锁的花朵 */
+				if(e=="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5"){
+					this.flowersbook[0].name="a花";
+					this.flowersbook[0].imgsrc="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
+				}else if(e=="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq20p7yiWK.v*cClX1OEumLAglMrFuX.mWpdsXymb7xm*dN.Tdguke8.rziwjf6pkmw!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5"){
+					this.flowersbook[1].name="b花";
+					this.flowersbook[1].imgsrc="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq20p7yiWK.v*cClX1OEumLAglMrFuX.mWpdsXymb7xm*dN.Tdguke8.rziwjf6pkmw!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
+				}
 			}
 		},
 		onShow:function(){
-			
+			this.getUserAchie();
 		},
 		components:{
 			uniPagination

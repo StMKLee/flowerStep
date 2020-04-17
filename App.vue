@@ -39,7 +39,14 @@ export default {
 	},
 	onShow: function() {
 		console.log('App Show');
+		uni.showLoading({
+			mask:true,
+			title:"加载中"
+		});
 		var that=this;
+		setTimeout(function(){
+			uni.hideLoading();
+		},3000);
 		uni.getSetting({		/* 用于应用显示时检测权限 */
 			success(res) {
 				if(res.authSetting['scope.userInfo']){
@@ -76,10 +83,11 @@ export default {
 										})
 									}else{
 										console.log("找到了相应记录");
-										that.$store.state.userData=res.data;
+										console.log(res.data[0]);
+										that.$store.state.userData=res.data[0];
 									}
 								}
-							})
+							});
 						}
 					});
 				};

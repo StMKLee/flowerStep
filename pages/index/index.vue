@@ -3,14 +3,14 @@
 
 <template>
 	<view class="container">
-		<view class="maincontent">			<!-- 主内容容器 -->
+		<view class="maincontent">			<!-- 主内容容器 -->	
 			<view class="shouquan" v-if="accessNo">			<!-- 初始授权用户信息 -->
 				<button open-type="getUserInfo" @getuserinfo="getUserMess" type="primary" size="mini">
 					登录
 				</button>
 			</view>
 			<view v-if="!accessNo" :class="stepclass">            <!-- 步数 -->
-				{{showStep}}
+				今日步数：{{showStep}}
 			</view>
 			<view class="dateAndTime">       <!-- 日期时间 -->
 				{{year}}年{{month}}月{{day}}日&nbsp;&nbsp;{{hour}}:{{minute}}&nbsp;&nbsp;星期{{week}}
@@ -36,7 +36,6 @@
 				week:null,
 				accessNo:false,
 				showStep:0,
-				stepTime:null,
 				stepclass:"steps",
 				plantnum:null,
 				flowerWidth:100,
@@ -172,14 +171,22 @@
 			
 		},
 		onLoad:function(){
-			
+			uni.showLoading({
+				mask:true,
+				title:"加载中"
+			});
+			setTimeout(function(){
+				uni.hideLoading();
+			},2500);
+			this.checkAccess();		/* 调用检测权限方法 */
 		},
 		onReady:function(){
 			
 		},
+		onHide:function(){
+			
+		},
 		onShow:function(){
-			this.checkAccess();		/* 调用检测权限方法 */
-			this.tranflowers();		/* 调用花变大变小方法 */
 			var _this=this;
 			_this.getTheDateTime();			  /* 初始化先执行一次时间获取方法 */
 			setInterval(function(){			/* 一秒执行一次时间获取方法 */
@@ -254,22 +261,9 @@
 							})
 						};
 						if(res.authSetting['scope.werun']){		/* 步数已经授权 */
-							//获取今日步数
-							uni.showLoading({
-								title:"加载中，请稍等",
-								mask:true,
-								success() {
-									console.log("Loading成功")
-								},
-								fail() {
-									console.log("Loading失败")
-								}
-							});
-							that.showStep="今日步数：" + that.$store.state.stepMess[that.$store.state.stepMess.length-1].step;
-							that.stepTime=that.$store.state.stepMess[that.$store.state.stepMess.length-1].timestamp;
+							that.showStep=that.$store.state.stepMess[that.$store.state.stepMess.length-1].step;
 							that.stepclass="steps";
 							that.howmanyFlowers();
-							uni.hideLoading();
 						}else if(!res.authSetting['scope.werun']){
 							that.showStep="请在 个人中心->帮助与反馈->权限设置 里打开微信步数权限";
 							that.stepclass="istip";
@@ -277,24 +271,8 @@
 					}
 				})
 			},
-			tranflowers:function(){		/* 花动画方法 */
-				var that=this;
-				clearInterval(that.flowerdonghua);
-				that.flowerdonghua=setInterval(function(){
-					if(that.flowerWidth<110&&that.donghuazt==0){
-						that.flowerWidth+=1;
-					}else if(that.flowerWidth==110&&that.donghuazt==0){
-						that.donghuazt=1;
-						that.flowerWidth-=1;
-					}else if(that.flowerWidth>100&&that.donghuazt==1){
-						that.flowerWidth-=1;
-					}else if(that.flowerWidth==100&&that.donghuazt==1){
-						that.donghuazt=0;
-						that.flowerWidth+=1;
-					}
-				},100)
-			},
 			howmanyFlowers:function(){		/* 花多少方法 */
+				this.allflowers=[];
 				if(this.showStep>=1000&&this.showStep<=10000){
 					var a=this.showStep/1000;
 					this.flowernum=Math.floor(a);
@@ -324,13 +302,28 @@
 					var x=Math.random();		/* 决定花种类 */
 					var y=Math.random()*30;		/* 决定花位置 */
 					var z=Math.floor(y);		/* 决定花位置 */
-					var zhonglei;
-					var weizhi;
-					if(x<=0.5){
-						zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq20p7yiWK.v*cClX1OEumLAglMrFuX.mWpdsXymb7xm*dN.Tdguke8.rziwjf6pkmw!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
-					}else{
-						zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5"
+					var zhonglei;				/* 表示是什么花 */
+					var weizhi;					/* 表示花的位置 */
+					
+					/* 以下算法表示小于9朵花时全部出a花,大于等于9朵花时第9朵开始0.75的概率出a花,0.25的概率出b花 */
+					if(this.flowernum<9){
+						zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
+						this.ihave(zhonglei);
+					}else if(this.flowernum>=9){
+						if(i<9){
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
+							this.ihave(zhonglei);
+						}else if(i>=9){
+							if(x<=0.75){
+								zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
+								this.ihave(zhonglei);
+							}else{
+								zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq20p7yiWK.v*cClX1OEumLAglMrFuX.mWpdsXymb7xm*dN.Tdguke8.rziwjf6pkmw!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
+								this.ihave(zhonglei);
+							};
+						}
 					};
+					
 					while(this.areaUsed[z].used==true){		/* 寻找空的位置 */
 						if(this.areaUsed[z].id<29){
 							z+=1;
@@ -347,7 +340,39 @@
 					/* 将一朵花的对象加入代表所有花的对象数组 */
 					this.allflowers.push(oneflower);
 				}
-				console.log(this.allflowers);
+			},
+			ihave:function(e){	/* 检测拥有过的花,如本花是第一次获得的,则存入数据库,以解锁图鉴 */
+				var that=this;
+				var ihasflo=that.$store.state.userData.hasFlo;
+				if(ihasflo===undefined){		/* 数据库定义的字段值为空数组的话，本地调用会变成undefined */
+					that.$store.state.userData.hasFlo=[];
+					that.$store.state.userData.hasFlo.push(e);
+					console.log("解锁新花");
+					wx.cloud.callFunction({
+						name:'updateHasFlo',
+						data:{
+							e:e
+						},
+						success:function(){
+							console.log("更新数据库成功")
+						}
+					})
+				}else{
+					if(!ihasflo.includes(e)){
+						that.$store.state.userData.hasFlo.push(e);
+						console.log("解锁新花");
+						wx.cloud.callFunction({
+							name:'updateHasFlo',
+							data:{
+								e:e
+							},
+							success:function(){
+								console.log("更新数据库成功")
+							}
+						})
+					}
+				};
+				
 			}
 		}
 	}
