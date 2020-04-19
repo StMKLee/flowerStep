@@ -21,7 +21,7 @@
 						logtexts:"添加了工作日志",
 					},
 					{
-						logtexts:"测试"
+						logtexts:"添加了花的详情页和传参方法"
 					}
 				]
 			}

@@ -95,7 +95,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   "uni-pagination": function() {
-    return __webpack_require__.e(/*! import() | components/uni-pagination/uni-pagination */ "components/uni-pagination/uni-pagination").then(__webpack_require__.bind(null, /*! @/components/uni-pagination/uni-pagination.vue */ 83))
+    return __webpack_require__.e(/*! import() | components/uni-pagination/uni-pagination */ "components/uni-pagination/uni-pagination").then(__webpack_require__.bind(null, /*! @/components/uni-pagination/uni-pagination.vue */ 97))
   }
 }
 var render = function() {
@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniPagination = function uniPagination() {__webpack_require__.e(/*! require.ensure | components/uni-pagination/uni-pagination */ "components/uni-pagination/uni-pagination").then((function () {return resolve(__webpack_require__(/*! ../../components/uni-pagination/uni-pagination.vue */ 83));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniPagination = function uniPagination() {__webpack_require__.e(/*! require.ensure | components/uni-pagination/uni-pagination */ "components/uni-pagination/uni-pagination").then((function () {return resolve(__webpack_require__(/*! ../../components/uni-pagination/uni-pagination.vue */ 97));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -275,6 +275,68 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
         this.flowersbook[1].name = "b花";
         this.flowersbook[1].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq20p7yiWK.v*cClX1OEumLAglMrFuX.mWpdsXymb7xm*dN.Tdguke8.rziwjf6pkmw!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
       }
+    },
+    jumptoflowerdetail: function jumptoflowerdetail(index) {
+      if (index == 0) {
+        uni.navigateTo({
+          url: '../flowerdetail/flowerdetail?key=0' });
+
+      } else
+      if (index == 1) {
+        uni.navigateTo({
+          url: '../flowerdetail/flowerdetail?key=1' });
+
+      } else
+      if (index == 2) {
+        uni.navigateTo({
+          url: '../flowerdetail/flowerdetail?key=2' });
+
+      } else
+      if (index == 3) {
+        uni.navigateTo({
+          url: '../flowerdetail/flowerdetail?key=3' });
+
+      } else
+      if (index == 4) {
+        uni.navigateTo({
+          url: '../flowerdetail/flowerdetail?key=4' });
+
+      } else
+      if (index == 5) {
+        uni.navigateTo({
+          url: '../flowerdetail/flowerdetail?key=5' });
+
+      } else
+      if (index == 6) {
+        uni.navigateTo({
+          url: '../flowerdetail/flowerdetail?key=6' });
+
+      } else
+      if (index == 7) {
+        uni.navigateTo({
+          url: '../flowerdetail/flowerdetail?key=7' });
+
+      } else
+      if (index == 8) {
+        uni.navigateTo({
+          url: '../flowerdetail/flowerdetail?key=8' });
+
+      } else
+      if (index == 9) {
+        uni.navigateTo({
+          url: '../flowerdetail/flowerdetail?key=9' });
+
+      } else
+      if (index == 10) {
+        uni.navigateTo({
+          url: '../flowerdetail/flowerdetail?key=10' });
+
+      } else
+      if (index == 11) {
+        uni.navigateTo({
+          url: '../flowerdetail/flowerdetail?key=11' });
+
+      }
     } },
 
   onShow: function onShow() {
@@ -282,6 +344,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   },
   components: {
     uniPagination: uniPagination } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

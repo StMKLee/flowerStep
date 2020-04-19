@@ -6,7 +6,7 @@
 		<view class="title">图鉴</view>
 		<view class="maincontent">
 			<view class="flowers" v-for="(item, index) in flowersbook" :key="index" v-show="item.show">
-				<image class="flowerimg" :src="item.imgsrc"></image>
+				<image class="flowerimg" :src="item.imgsrc" @click="jumptoflowerdetail(index)"></image>
 				<view class="flowertip">{{item.name}}</view>
 			</view>
 			<view class="pagination">
@@ -137,6 +137,68 @@
 				}else if(e=="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq20p7yiWK.v*cClX1OEumLAglMrFuX.mWpdsXymb7xm*dN.Tdguke8.rziwjf6pkmw!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5"){
 					this.flowersbook[1].name="b花";
 					this.flowersbook[1].imgsrc="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq20p7yiWK.v*cClX1OEumLAglMrFuX.mWpdsXymb7xm*dN.Tdguke8.rziwjf6pkmw!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
+				}
+			},
+			jumptoflowerdetail:function(index){
+				if(index==0){
+					uni.navigateTo({
+					    url: '../flowerdetail/flowerdetail?key=0'
+					});
+				}
+				else if(index==1){
+					uni.navigateTo({
+					    url: '../flowerdetail/flowerdetail?key=1'
+					});
+				}
+				else if(index==2){
+					uni.navigateTo({
+					    url: '../flowerdetail/flowerdetail?key=2'
+					});
+				}
+				else if(index==3){
+					uni.navigateTo({
+					    url: '../flowerdetail/flowerdetail?key=3'
+					});
+				}
+				else if(index==4){
+					uni.navigateTo({
+					    url: '../flowerdetail/flowerdetail?key=4'
+					});
+				}
+				else if(index==5){
+					uni.navigateTo({
+					    url: '../flowerdetail/flowerdetail?key=5'
+					});
+				}
+				else if(index==6){
+					uni.navigateTo({
+					    url: '../flowerdetail/flowerdetail?key=6'
+					});
+				}
+				else if(index==7){
+					uni.navigateTo({
+					    url: '../flowerdetail/flowerdetail?key=7'
+					});
+				}
+				else if(index==8){
+					uni.navigateTo({
+					    url: '../flowerdetail/flowerdetail?key=8'
+					});
+				}
+				else if(index==9){
+					uni.navigateTo({
+					    url: '../flowerdetail/flowerdetail?key=9'
+					});
+				}
+				else if(index==10){
+					uni.navigateTo({
+					    url: '../flowerdetail/flowerdetail?key=10'
+					});
+				}
+				else if(index==11){
+					uni.navigateTo({
+					    url: '../flowerdetail/flowerdetail?key=11'
+					});
 				}
 			}
 		},

@@ -1555,7 +1555,7 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
-/***/ 116:
+/***/ 130:
 /*!***************************************************!*\
   !*** D:/flowerStep/components/uni-icons/icons.js ***!
   \***************************************************/
@@ -9789,7 +9789,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/firstpage/firstpage": { "navigationBarTitleText": "FlowersStep", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/index/index": { "navigationBarTitleText": "FlowersStep", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/monthFlower/monthFlower": { "navigationBarTitleText": "FlowersStep", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/achievement/achievement": { "navigationBarTitleText": "FlowersStep", "usingComponents": { "uni-pagination": "/components/uni-pagination/uni-pagination" }, "usingAutoImportComponents": { "uni-pagination": "/components/uni-pagination/uni-pagination" } }, "pages/UserCenter/UserCenter": { "navigationBarTitleText": "FlowersStep", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/about/about": { "navigationBarTitleText": "FlowersStep", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/help/help": { "navigationBarTitleText": "FlowersStep", "usingComponents": {}, "usingAutoImportComponents": { "uni-list": "/components/uni-list/uni-list", "uni-list-item": "/components/uni-list-item/uni-list-item" } }, "pages/feedback/feedback": { "navigationBarTitleText": "FlowersStep", "usingComponents": {}, "usingAutoImportComponents": { "uni-card": "/components/uni-card/uni-card" } }, "pages/honor/honor": { "navigationBarTitleText": "FlowersStep", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/log/log": {} }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "FlowersStep", "navigationBarBackgroundColor": "#20c4ff", "backgroundColor": "#ffffff" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/firstpage/firstpage": { "navigationBarTitleText": "FlowersStep" }, "pages/index/index": { "navigationBarTitleText": "FlowersStep" }, "pages/monthFlower/monthFlower": { "navigationBarTitleText": "FlowersStep" }, "pages/achievement/achievement": { "navigationBarTitleText": "FlowersStep" }, "pages/UserCenter/UserCenter": { "navigationBarTitleText": "FlowersStep" }, "pages/about/about": { "navigationBarTitleText": "FlowersStep" }, "pages/help/help": { "navigationBarTitleText": "FlowersStep" }, "pages/feedback/feedback": { "navigationBarTitleText": "FlowersStep" }, "pages/honor/honor": { "navigationBarTitleText": "FlowersStep" }, "pages/log/log": {}, "pages/flowerdetail/flowerdetail": {} }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "FlowersStep", "navigationBarBackgroundColor": "#20c4ff", "backgroundColor": "#ffffff" } };exports.default = _default;
 
 /***/ }),
 

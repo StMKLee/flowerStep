@@ -9,7 +9,8 @@
     "pages/help/help",
     "pages/feedback/feedback",
     "pages/honor/honor",
-    "pages/log/log"
+    "pages/log/log",
+    "pages/flowerdetail/flowerdetail"
   ],
   "subPackages": [],
   "window": {
@@ -40,5 +41,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap72.json"
 }
