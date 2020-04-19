@@ -50,7 +50,7 @@
 						key: 4,
 					},
 					{
-						name: '待定',
+						name: '工作日志',
 						icon: '../../static/images/9.png',
 						key: 5,
 					},
@@ -119,7 +119,7 @@
 				}
 				else if(index==4){
 					uni.navigateTo({
-					    url: '#'
+					    url: '../log/log'
 					});
 				}
 				else if(index==5){

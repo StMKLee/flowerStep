@@ -1,0 +1,1 @@
+<view><view class="title">工作日志</view><block wx:for="{{logs}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="content"><view logtexts="{{item.logtexts}}">{{''+(index+1)+": "+item.logtexts+''}}</view></view></block></view>

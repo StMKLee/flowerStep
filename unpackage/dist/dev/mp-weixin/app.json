@@ -8,7 +8,8 @@
     "pages/about/about",
     "pages/help/help",
     "pages/feedback/feedback",
-    "pages/honor/honor"
+    "pages/honor/honor",
+    "pages/log/log"
   ],
   "subPackages": [],
   "window": {
@@ -39,6 +40,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap8.json"
+  "usingComponents": {}
 }

@@ -1,0 +1,27 @@
+
+page{
+	background-color: #81C7D4;
+	color: #FFFFFF;
+}
+.title{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	font-size: 40rpx;
+	font-weight: bolder;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	margin-bottom: 28rpx;
+}
+.content{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	font-size: 28rpx;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	margin-bottom: 20rpx;
+}
+

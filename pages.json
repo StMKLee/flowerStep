@@ -54,6 +54,10 @@
 				"navigationBarTitleText": "FlowersStep"
 			}
         }
+        ,{
+            "path" : "pages/log/log",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
