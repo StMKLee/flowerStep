@@ -18,31 +18,28 @@
 				flowers:[
 					{
 						id:0,
-						name:A花,
-						content:abcdefg,
+						name:"A花",				/* 字符串内容记得加引号! */
+						content:"这是A花",
 						fshow:false
 					},
 					{
 						id:1,
-						name:B花,
-						content:abcdefghijk,
+						name:"B花",
+						content:"这是B花",
 						fshow:false
 					},
 				]
 			}
 		},
-		onLoad: function(option) {
-			console.log(option.key)
-			this.showMethedetail(option.key)
+		onLoad: function() {
+			
+		},
+		onShow: function() {		/* 判断方法要放这里，代表每次展示页面都判断一下，onload是初始化加载 */
+			this.getDetail();		/* 获得参数的方法 */
 		},
 		methods: {
-			showMethedetail:function(e){
-				if(this.flowers[0].id==e){
-					console.log(success)
-				}
-				else if(this.flowers[1].id==e){
-					
-				}
+			getDetail:function(){
+				this.flowers[this.$store.state.floDetailIdx].fshow=true;
 			}
 		}
 	}

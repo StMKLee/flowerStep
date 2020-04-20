@@ -111,7 +111,6 @@
 			},
 			getUserAchie:function(){	/* 获取用户数据库图鉴数据并解析 */
 				var imgsrcls=this.$store.state.userData.hasFlo;
-				console.log(imgsrcls);
 				if(imgsrcls!==undefined){
 					for (var i=0;i<imgsrcls.length;i++) {
 						let ifAchie=0;		/* 状态,等于0代表本地无相同的此imgsrc,则必须调用新花方法 */
@@ -139,66 +138,15 @@
 					this.flowersbook[1].imgsrc="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq20p7yiWK.v*cClX1OEumLAglMrFuX.mWpdsXymb7xm*dN.Tdguke8.rziwjf6pkmw!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
 				}
 			},
-			jumptoflowerdetail:function(index){
-				if(index==0){
+			jumptoflowerdetail:function(e){
+				/* 先判断是否解锁了,解锁的才打开详细页 */
+				if(this.flowersbook[e].name=="未解锁"){
+					return;		/* 什么都不干 */
+				}else{
+					this.$store.state.floDetailIdx=e;
 					uni.navigateTo({
-					    url: '../flowerdetail/flowerdetail?key=0'
-					});
-				}
-				else if(index==1){
-					uni.navigateTo({
-					    url: '../flowerdetail/flowerdetail?key=1'
-					});
-				}
-				else if(index==2){
-					uni.navigateTo({
-					    url: '../flowerdetail/flowerdetail?key=2'
-					});
-				}
-				else if(index==3){
-					uni.navigateTo({
-					    url: '../flowerdetail/flowerdetail?key=3'
-					});
-				}
-				else if(index==4){
-					uni.navigateTo({
-					    url: '../flowerdetail/flowerdetail?key=4'
-					});
-				}
-				else if(index==5){
-					uni.navigateTo({
-					    url: '../flowerdetail/flowerdetail?key=5'
-					});
-				}
-				else if(index==6){
-					uni.navigateTo({
-					    url: '../flowerdetail/flowerdetail?key=6'
-					});
-				}
-				else if(index==7){
-					uni.navigateTo({
-					    url: '../flowerdetail/flowerdetail?key=7'
-					});
-				}
-				else if(index==8){
-					uni.navigateTo({
-					    url: '../flowerdetail/flowerdetail?key=8'
-					});
-				}
-				else if(index==9){
-					uni.navigateTo({
-					    url: '../flowerdetail/flowerdetail?key=9'
-					});
-				}
-				else if(index==10){
-					uni.navigateTo({
-					    url: '../flowerdetail/flowerdetail?key=10'
-					});
-				}
-				else if(index==11){
-					uni.navigateTo({
-					    url: '../flowerdetail/flowerdetail?key=11'
-					});
+						url:"../flowerdetail/flowerdetail"
+					})
 				}
 			}
 		},

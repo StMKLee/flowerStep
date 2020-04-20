@@ -9,7 +9,8 @@ const store = new Vuex.Store({
 		userMess:[],
 		stepMess:null,
 		userid:null,		/* 用户身份凭证 */
-		userData:[]			/* 从数据库获取的用户数据 */
+		userData:[],		/* 从数据库获取的用户数据 */
+		floDetailIdx:null		/* 决定花详细页内容的参数 */
 	},
 	mutations:{
 		
