@@ -311,7 +311,6 @@ var _default =
     setTimeout(function () {
       uni.hideLoading();
     }, 2500);
-    this.checkAccess(); /* 调用检测权限方法 */
   },
   onReady: function onReady() {
 
@@ -321,6 +320,7 @@ var _default =
   },
   onShow: function onShow() {
     var _this = this;
+    _this.checkAccess(); /* 调用检测权限方法 */
     _this.getTheDateTime(); /* 初始化先执行一次时间获取方法 */
     setInterval(function () {/* 一秒执行一次时间获取方法 */
       _this.getTheDateTime();
@@ -405,48 +405,52 @@ var _default =
 
     },
     howmanyFlowers: function howmanyFlowers() {/* 花多少方法 */
-      this.allflowers = [];
+      this.allflowers = this.$store.state.userData.todayFlo;
+      var hadnum = this.$store.state.userData.todayFlo.length;
+      this.getUsedArea(); /* 获取已经占用的位置状态 */
       if (this.showStep >= 1000 && this.showStep <= 10000) {
         var a = this.showStep / 1000;
-        this.flowernum = Math.floor(a);
-        this.getflowers();
+        this.flowernum = Math.floor(a) - hadnum;
       } else if (this.showStep > 10000 && this.showStep <= 30000) {
         var b1 = this.showStep - 10000;
         var b2 = b1 / 2000;
         var b3 = Math.floor(b2);
-        this.flowernum = b3 + 10;
-        this.getflowers();
+        this.flowernum = b3 + 10 - hadnum;
       } else if (this.showStep > 30000 && this.showStep <= 60000) {
         var c1 = this.showStep - 30000;
         var c2 = b1 / 3000;
         var c3 = Math.floor(c2);
-        this.flowernum = c3 + 20;
-        this.getflowers();
+        this.flowernum = c3 + 20 - hadnum;
       } else if (this.showStep > 60000) {
-        this.flowernum = 30;
-        this.getflowers();
+        this.flowernum = 30 - hadnum;
       } else if (this.showStep < 1000) {
         this.flowernum = 0;
       };
-      console.log("今日有花：" + this.flowernum);
+      if (this.flowernum > 0) {
+        this.getflowers();
+      }
     },
     getflowers: function getflowers() {/* 根据花数量获取花,包括产生随机位置等 */
+      var hadFlonum = this.$store.state.userData.todayFlo.length;
+      var allFlonum = hadFlonum + this.flowernum;
       for (var i = 0; i < this.flowernum; i++) {/* 产生几朵花 */
         var x = Math.random(); /* 决定花种类 */
         var y = Math.random() * 30; /* 决定花位置 */
         var z = Math.floor(y); /* 决定花位置 */
         var zhonglei; /* 表示是什么花 */
         var weizhi; /* 表示花的位置 */
+        console.log(hadFlonum);
+        console.log(allFlonum);
 
         /* 以下算法表示小于9朵花时全部出a花,大于等于9朵花时第9朵开始0.75的概率出a花,0.25的概率出b花 */
-        if (this.flowernum < 9) {
+        if (allFlonum < 9) {
           zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
           this.ihave(zhonglei);
-        } else if (this.flowernum >= 9) {
-          if (i < 9) {
+        } else if (allFlonum >= 9) {
+          if (hadFlonum + i + 1 < 9) {
             zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
             this.ihave(zhonglei);
-          } else if (i >= 9) {
+          } else if (hadFlonum + i + 1 >= 9) {
             if (x <= 0.75) {
               zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
               this.ihave(zhonglei);
@@ -460,7 +464,7 @@ var _default =
         while (this.areaUsed[z].used == true) {/* 寻找空的位置 */
           if (this.areaUsed[z].id < 29) {
             z += 1;
-          } else if (this.areaUsed[z] == 29) {
+          } else if (this.areaUsed[z].id == 29) {
             z = 0;
           }
         };
@@ -473,6 +477,17 @@ var _default =
         /* 将一朵花的对象加入代表所有花的对象数组 */
         this.allflowers.push(oneflower);
       }
+      this.$store.state.userData.todayFlo = this.allflowers;
+      var that = this;
+      wx.cloud.callFunction({
+        name: 'updateTodayFlo',
+        data: {
+          e: that.allflowers },
+
+        success: function success() {
+          console.log("更新todayFlo成功");
+        } });
+
     },
     ihave: function ihave(e) {/* 检测拥有过的花,如本花是第一次获得的,则存入数据库,以解锁图鉴 */
       var that = this;
@@ -487,7 +502,7 @@ var _default =
             e: e },
 
           success: function success() {
-            console.log("更新数据库成功");
+            console.log("更新hasFlo成功");
           } });
 
       } else {
@@ -506,6 +521,16 @@ var _default =
         }
       };
 
+    },
+    getUsedArea: function getUsedArea() {
+      var u = this.$store.state.userData.todayFlo;
+      if (u.length != 0) {
+        for (var i = 0; i < u.length; i++) {
+          var str = u[i].flowerClass.substring(4);
+          var snum = parseInt(str);
+          this.areaUsed[snum].used = true;
+        }
+      }
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
