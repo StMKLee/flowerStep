@@ -3,7 +3,13 @@
 
 <template>
 	<view>
-		月花
+		<view class="num" >
+			月步数总和：{{stepsnum}}
+		</view>
+		<view class="sum">
+			月花种植数：{{sumflowers}}
+		</view>
+		
 	</view>
 </template>
 
@@ -11,18 +17,52 @@
 	export default {
 		data() {
 			return {
-				
+				stepsnum:0,
+				flowernum:0,
+				sumflowers:0
 			}
 		},
+		onLoad:function(){
+			this.monthstepsnum(this.$store.state.stepMess)
+		},
 		methods: {
-			
+			monthstepsnum:function(e){
+				var i=0;
+				for(;i<30;i++){
+					this.stepsnum+=e[i].step
+					if(e[i].step>60000){
+						this.flowernum=30;
+					}else if(e[i].step>30000&&e[i].step<=60000){
+						var a = e[i].step/3000
+						this.flowernum=20+Math.floor(a)
+					}else if(e[i].step>10000&&e[i].step<=30000){
+						var b = e[i].step/2000
+						this.flowernum=20+Math.floor(b)
+					}else if(e[i].step>=1000&&e[i].step<=10000){
+						var c = e[i].step/1000
+						this.flowernum=Math.floor(c)
+					}else if(e[i].step<1000){
+						this.flowernum=0
+					};
+					this.sumflowers+=this.flowernum
+				}
+			}
 		}
 	}
 </script>
 
 <style>
 page{
-	background-color: #81C7D4;
-	color: #FFFFFF;
+	background-color: #FEFEFF;
+	color: #33A6B8;
+	background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587389110729&di=b69d906bb7362a55d764fb6f71b8eb0a&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F3701ee4cc4844e0e16e3d9128329579ec1dc5f31429f6-N8dnhq_fw658");
+	background-repeat: no-repeat;
+	background-size: 100% 80%;
+	background-position: bottom;
+}
+.sum{
+	position: fixed;
+	top:0;
+	right: 0;
 }
 </style>
