@@ -4,10 +4,10 @@
 <template>
 	<view>
 		<view class="num" >
-			月步数总和：{{stepsnum}}
+			近31天总步数：{{stepsnum}}
 		</view>
 		<view class="sum">
-			月花种植数：{{sumflowers}}
+			近31天总花数：{{sumflowers}}
 		</view>
 		
 	</view>
