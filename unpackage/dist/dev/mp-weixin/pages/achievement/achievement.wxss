@@ -35,7 +35,8 @@ page{
 	text-align: center;
 }
 .flowers{
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	width: 300rpx;
 	height: auto;
 	border-color: #714819;

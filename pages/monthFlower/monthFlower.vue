@@ -6,7 +6,7 @@
 		<view class="num" >
 			近31天总步数：{{stepsnum}}
 		</view>
-		<view class="sum">
+		<view class="num sum">
 			近31天总花数：{{sumflowers}}
 		</view>
 		
@@ -64,5 +64,10 @@ page{
 	position: fixed;
 	top:0;
 	right: 0;
+	margin-right: 15rpx;
+}
+.num{
+	font-size: 30rpx;
+	margin-left: 15rpx;
 }
 </style>

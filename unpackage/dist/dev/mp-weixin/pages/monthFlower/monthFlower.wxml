@@ -1,1 +1,1 @@
-<view><view class="num">{{'近31天总步数：'+stepsnum+''}}</view><view class="sum">{{'近31天总花数：'+sumflowers+''}}</view></view>
+<view><view class="num">{{'近31天总步数：'+stepsnum+''}}</view><view class="num sum">{{'近31天总花数：'+sumflowers+''}}</view></view>

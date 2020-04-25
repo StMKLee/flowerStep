@@ -40,7 +40,7 @@
 						key: 2,
 					},
 					{
-						name: '月种植数',
+						name: '近31天',
 						icon: '../../static/images/zhongzhi.png',
 						key: 3,
 					},

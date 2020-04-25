@@ -19,11 +19,11 @@
 }
 .uni-list-item__container.data-v-65596703 {
 		position: relative;
-		
+
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: flex;
-		
+
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		-webkit-flex-direction: row;
@@ -40,13 +40,10 @@
 		-webkit-box-align: center;
 		-webkit-align-items: center;
 		        align-items: center;
-		
 }
 .uni-list-item--first.data-v-65596703 {
 		border-top-width: 0px;
 }
-
-	
 .uni-list-item__container.data-v-65596703:after {
 		position: absolute;
 		top: 0;
@@ -61,14 +58,12 @@
 .uni-list-item--first.data-v-65596703:after {
 		height: 0px;
 }
-
-	
 .uni-list-item__content.data-v-65596703 {
-		
+
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: flex;
-		
+
 		-webkit-box-flex: 1;
 		-webkit-flex: 1;
 		        flex: 1;
@@ -93,11 +88,11 @@
 .uni-list-item__extra.data-v-65596703 {
 		/* width: 25%;
  */
-		
+
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: flex;
-		
+
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		-webkit-flex-direction: row;

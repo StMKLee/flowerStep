@@ -11,5 +11,10 @@ page{
 	position: fixed;
 	top:0;
 	right: 0;
+	margin-right: 15rpx;
+}
+.num{
+	font-size: 30rpx;
+	margin-left: 15rpx;
 }
 

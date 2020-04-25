@@ -1,10 +1,10 @@
 
 .uni-pagination.data-v-ebaef3d2 {
-	
+
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	
+
 	position: relative;
 	overflow: hidden;
 	-webkit-box-orient: horizontal;
@@ -19,11 +19,11 @@
 	        align-items: center;
 }
 .uni-pagination__btn.data-v-ebaef3d2 {
-	
+
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	
+
 	width: 60px;
 	height: 30px;
 	line-height: 30px;
@@ -46,11 +46,11 @@
 	border-color: #e5e5e5;
 }
 .uni-pagination__child-btn.data-v-ebaef3d2 {
-	
+
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	
+
 	font-size: 28rpx;
 	position: relative;
 	-webkit-box-orient: horizontal;
@@ -66,11 +66,11 @@
 	text-align: center;
 }
 .uni-pagination__num.data-v-ebaef3d2 {
-	
+
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	
+
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
 	        flex: 1;
@@ -90,11 +90,11 @@
 	color: #333;
 }
 .uni-pagination__num-current.data-v-ebaef3d2 {
-	
+
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	
+
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	-webkit-flex-direction: row;
