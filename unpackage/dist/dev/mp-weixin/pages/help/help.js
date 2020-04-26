@@ -146,6 +146,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 var _default =
 {
   data: function data() {
@@ -174,6 +175,19 @@ var _default =
         },
         fail: function fail() {
           console.log("操作提示失败");
+        } });
+
+    },
+    whyMonthFlo: function whyMonthFlo() {
+      uni.showModal({
+        title: "相关解释",
+        content: "关于近31天花总数和各种花拥有数不符，是因为近31天花总数是根据微信31天步数数据直接折算得到，而各种花拥有数是用户开始使用本小程序之后才开始计算。",
+        showCancel: false,
+        success: function success() {
+          console.log("相关解释成功");
+        },
+        fail: function fail() {
+          console.log("相关解释失败");
         } });
 
     } } };exports.default = _default;

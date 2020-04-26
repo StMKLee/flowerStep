@@ -4,6 +4,7 @@
 		    <uni-list-item title="帮助中心" :show-arrow="false" disabled="true"></uni-list-item>
 		    <uni-list-item title="权限设置" @click="openSettings"></uni-list-item>
 		    <uni-list-item title="如何开启微信运动" @click="howToGetWerun"></uni-list-item>
+			<uni-list-item title="近31天花总数与各种花拥有数相关疑问" @click="whyMonthFlo"></uni-list-item>
 		</uni-list>
 		
 	</view>
@@ -37,6 +38,19 @@
 					},
 					fail() {
 						console.log("操作提示失败")
+					}
+				})
+			},
+			whyMonthFlo:function(){
+				uni.showModal({
+					title:"相关解释",
+					content:"关于近31天花总数和各种花拥有数不符，是因为近31天花总数是根据微信31天步数数据直接折算得到，而各种花拥有数是用户开始使用本小程序之后才开始计算。",
+					showCancel:false,
+					success() {
+						console.log("相关解释成功")
+					},
+					fail() {
+						console.log("相关解释失败")
 					}
 				})
 			}
