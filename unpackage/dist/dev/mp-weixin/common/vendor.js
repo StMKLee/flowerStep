@@ -1560,7 +1560,7 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
-/***/ 130:
+/***/ 122:
 /*!**************************************************************************!*\
   !*** D:/work/Hbuilder/projects/flowerStep/components/uni-icons/icons.js ***!
   \**************************************************************************/
@@ -9794,7 +9794,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/firstpage/firstpage": { "navigationBarTitleText": "FlowersStep" }, "pages/index/index": { "navigationBarTitleText": "FlowersStep" }, "pages/monthFlower/monthFlower": { "navigationBarTitleText": "FlowersStep" }, "pages/achievement/achievement": { "navigationBarTitleText": "FlowersStep" }, "pages/UserCenter/UserCenter": { "navigationBarTitleText": "FlowersStep" }, "pages/about/about": { "navigationBarTitleText": "FlowersStep" }, "pages/help/help": { "navigationBarTitleText": "FlowersStep" }, "pages/feedback/feedback": { "navigationBarTitleText": "FlowersStep" }, "pages/honor/honor": { "navigationBarTitleText": "FlowersStep" }, "pages/log/log": {}, "pages/flowerdetail/flowerdetail": {} }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "FlowersStep", "navigationBarBackgroundColor": "#20c4ff", "backgroundColor": "#ffffff" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/firstpage/firstpage": { "navigationBarTitleText": "FlowersStep" }, "pages/index/index": { "navigationBarTitleText": "FlowersStep" }, "pages/monthFlower/monthFlower": { "navigationBarTitleText": "FlowersStep" }, "pages/achievement/achievement": { "navigationBarTitleText": "FlowersStep" }, "pages/UserCenter/UserCenter": { "navigationBarTitleText": "FlowersStep" }, "pages/about/about": { "navigationBarTitleText": "FlowersStep" }, "pages/help/help": { "navigationBarTitleText": "FlowersStep" }, "pages/feedback/feedback": { "navigationBarTitleText": "FlowersStep" }, "pages/honor/honor": { "navigationBarTitleText": "FlowersStep" }, "pages/flowerdetail/flowerdetail": {} }, "globalStyle": { "navigationBarTextStyle": "white", "navigationBarTitleText": "FlowersStep", "navigationBarBackgroundColor": "#20c4ff", "backgroundColor": "#ffffff" } };exports.default = _default;
 
 /***/ }),
 

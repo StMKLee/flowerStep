@@ -4,8 +4,6 @@
 		    <uni-list-item title="帮助中心" :show-arrow="false" disabled="true"></uni-list-item>
 		    <uni-list-item title="权限设置" @click="openSettings"></uni-list-item>
 		    <uni-list-item title="如何开启微信运动" @click="howToGetWerun"></uni-list-item>
-			<uni-list-item title="待定"></uni-list-item>
-			<uni-list-item title="意见反馈" @click="goFeedback"></uni-list-item>
 		</uni-list>
 		
 	</view>
@@ -40,11 +38,6 @@
 					fail() {
 						console.log("操作提示失败")
 					}
-				})
-			},
-			goFeedback:function(){
-				uni.navigateTo({
-					url:"../feedback/feedback"
 				})
 			}
 		}

@@ -7,6 +7,7 @@
 			<view class="" :content="item.content">
 				{{item.content}}
 			</view>
+			<view>{{theNum}}</view>
 		</view>
 	</view>
 </template>
@@ -28,7 +29,8 @@
 						content:"这是B花",
 						fshow:false
 					},
-				]
+				],
+				theNum:0		/* 拥有过多少此种花 */
 			}
 		},
 		onLoad: function() {
@@ -40,6 +42,7 @@
 		methods: {
 			getDetail:function(){
 				this.flowers[this.$store.state.floDetailIdx].fshow=true;
+				this.theNum=this.$store.state.userData.floNum[this.$store.state.floDetailIdx];
 			}
 		}
 	}

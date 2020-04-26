@@ -78,7 +78,8 @@ export default {
 										appU.add({
 											data:{
 												todayFlo:[],
-												hasFlo:[]
+												hasFlo:[],
+												floNum:[0,0,0,0,0,0,0,0,0,0,0,0]
 											}
 										})
 									}else{

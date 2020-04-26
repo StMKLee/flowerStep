@@ -45,12 +45,12 @@
 						key: 3,
 					},
 					{
-						name: '帮助与反馈',
+						name: '帮助中心',
 						icon: '../../static/images/8.png',
 						key: 4,
 					},
 					{
-						name: '工作日志',
+						name: '意见反馈',
 						icon: '../../static/images/9.png',
 						key: 5,
 					},
@@ -119,7 +119,7 @@
 				}
 				else if(index==4){
 					uni.navigateTo({
-					    url: '../log/log'
+					    url: '../feedback/feedback'
 					});
 				}
 				else if(index==5){

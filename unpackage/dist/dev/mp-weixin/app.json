@@ -9,7 +9,6 @@
     "pages/help/help",
     "pages/feedback/feedback",
     "pages/honor/honor",
-    "pages/log/log",
     "pages/flowerdetail/flowerdetail"
   ],
   "subPackages": [],
@@ -41,6 +40,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap62.json"
+  "usingComponents": {}
 }

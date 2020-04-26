@@ -405,7 +405,12 @@ var _default =
     },
     howmanyFlowers: function howmanyFlowers() {/* 花多少方法 */
       this.allflowers = this.$store.state.userData.todayFlo;
-      var hadnum = this.$store.state.userData.todayFlo.length;
+      var hadnum;
+      if (this.allflowers.length == 0) {
+        hadnum = 0;
+      } else {
+        hadnum = this.allflowers.length;
+      };
       this.getUsedArea(); /* 获取已经占用的位置状态 */
       if (this.showStep >= 1000 && this.showStep <= 10000) {
         var a = this.showStep / 1000;
@@ -438,27 +443,39 @@ var _default =
         var z = Math.floor(y); /* 决定花位置 */
         var zhonglei; /* 表示是什么花 */
         var weizhi; /* 表示花的位置 */
-        console.log(hadFlonum);
-        console.log(allFlonum);
 
         /* 以下算法表示小于9朵花时全部出a花,大于等于9朵花时第9朵开始0.75的概率出a花,0.25的概率出b花 */
         if (allFlonum < 9) {
           zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
           this.ihave(zhonglei);
+          this.$store.state.userData.floNum[0] += 1;
         } else if (allFlonum >= 9) {
           if (hadFlonum + i + 1 < 9) {
             zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
             this.ihave(zhonglei);
+            this.$store.state.userData.floNum[0] += 1;
           } else if (hadFlonum + i + 1 >= 9) {
             if (x <= 0.75) {
               zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
               this.ihave(zhonglei);
+              this.$store.state.userData.floNum[0] += 1;
             } else {
               zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq20p7yiWK.v*cClX1OEumLAglMrFuX.mWpdsXymb7xm*dN.Tdguke8.rziwjf6pkmw!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
               this.ihave(zhonglei);
+              this.$store.state.userData.floNum[1] += 1;
             };
           }
         };
+
+        wx.cloud.callFunction({ /* 统计花数量,存入数据库 */
+          name: 'incFlo',
+          data: {
+            e: zhonglei },
+
+          success: function success() {
+            console.log("更新incFlo成功");
+          } });
+
 
         while (this.areaUsed[z].used == true) {/* 寻找空的位置 */
           if (this.areaUsed[z].id < 29) {

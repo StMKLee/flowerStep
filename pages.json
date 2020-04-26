@@ -55,10 +55,6 @@
 			}
         }
         ,{
-            "path" : "pages/log/log",
-            "style" : {}
-        }
-        ,{
             "path" : "pages/flowerdetail/flowerdetail",
             "style" : {}
         }

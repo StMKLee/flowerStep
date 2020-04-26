@@ -174,7 +174,8 @@ __webpack_require__.r(__webpack_exports__);
                     appU.add({
                       data: {
                         todayFlo: [],
-                        hasFlo: [] } });
+                        hasFlo: [],
+                        floNum: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] } });
 
 
                   } else {
