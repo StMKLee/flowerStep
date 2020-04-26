@@ -1,14 +1,18 @@
 <template>
 	<view class="container">
 		<view class="Logo">
-			<image src="../../static/images/user.png" mode=""></image>
+			<image src="../../static/images/teamicon.png" mode=""></image>
 		</view>
 		<view class="title">
-			<text>团队名称</text>
+			<text>印迹园丁</text>
 		</view>
 		<view class="text">
-			<text>团队详情团队详情团队详情团队详情团队详情团队详情团队详情团队详情团队详情
-			应用详情应用详情应用详情应用详情应用详情应用详情应用详情应用详情应用详情应用详情</text>
+			<view>
+				{{text}}
+			</view>
+			<view class="textstyle">
+				{{text2}}
+			</view>
 		</view>
 	</view>
 </template>
@@ -17,7 +21,8 @@
 	export default {
 		data() {
 			return {
-				
+				text:"FLowers Step是一款由我们团队打造的微信小程序，它通过种花的形式将每日的微信运动步数呈现出来，以此来展现低碳生活对于环境的重要性。",
+				text2:"团队成员：MKLee、nullcjm、Vance"
 			}
 		},
 		methods: {
@@ -28,7 +33,7 @@
 
 <style>
 	page{
-		background-image: url("http://a1.qpic.cn/psc?/V10EvO2w4BqwM9/oGEovji5dOWVs5ze3TLFduS69g.mO1x0.Koj5HuvQlyAcU1RvLd*X1uG3Y1MEzVuPRAy1wM9kckLnIQfDqpaFQ!!/b&ek=1&kp=1&pt=0&bo=vAKWAwAAAAARFws!&tl=3&vuin=1029169758&tm=1586523600&sce=60-2-2&rf=viewer_4");
+		background-image: url("https://images.pexels.com/photos/1883385/pexels-photo-1883385.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 		background-color: rgb(248,248,248);
@@ -37,17 +42,25 @@
 		text-align: center;
 		margin-top: 80upx;
 	}
+	image{
+		width: 200rpx;
+		height: 200rpx;
+	}
 	.title{
 		text-align: center;
-		font-size: 72upx;
+		font-size: 48upx;
 		margin-bottom: 40upx;
 	}
 	.text{
-		background-color: rgba(255,255,255,0.4);
+		background-color: rgba(255,255,255,0.6);
 		font-family: Arial, Helvetica, sans-serif;
 		padding: 10upx;
 		margin: 0 40upx 0 40upx;
 		border: 2upx black solid;
 		border-radius: 5%;
+	}
+	.textstyle{
+		font-family: Arial, Helvetica, sans-serif;
+		color: #3F536E;
 	}
 </style>

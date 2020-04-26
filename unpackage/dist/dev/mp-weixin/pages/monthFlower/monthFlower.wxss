@@ -2,9 +2,15 @@
 page{
 	background-color: #FEFEFF;
 	color: #33A6B8;
-	background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587389110729&di=b69d906bb7362a55d764fb6f71b8eb0a&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F3701ee4cc4844e0e16e3d9128329579ec1dc5f31429f6-N8dnhq_fw658");
+	/* 无版权背景图 */
+	/* background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587389110729&di=b69d906bb7362a55d764fb6f71b8eb0a&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F3701ee4cc4844e0e16e3d9128329579ec1dc5f31429f6-N8dnhq_fw658");
 	background-repeat: no-repeat;
 	background-size: 100% 80%;
+	background-position: bottom; */
+	/* 免费版权背景图 */
+	background-image: url("https://images.pexels.com/photos/2395251/pexels-photo-2395251.jpeg?cs=srgb&dl=pexels-2395251.jpg&fm=jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	background-position: bottom;
 }
 .sum{
