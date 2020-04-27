@@ -155,30 +155,11 @@ var _default =
 
   },
   onLoad: function onLoad() {
-    this.monthstepsnum(this.$store.state.stepMess);
+    this.stepsnum = this.$store.state.stepsnum;
+    this.sumflowers = this.$store.state.sumflowers;
+
   },
-  methods: {
-    monthstepsnum: function monthstepsnum(e) {
-      var i = 0;
-      for (; i < 30; i++) {
-        this.stepsnum += e[i].step;
-        if (e[i].step > 60000) {
-          this.flowernum = 30;
-        } else if (e[i].step > 30000 && e[i].step <= 60000) {
-          var a = e[i].step / 3000;
-          this.flowernum = 20 + Math.floor(a);
-        } else if (e[i].step > 10000 && e[i].step <= 30000) {
-          var b = e[i].step / 2000;
-          this.flowernum = 20 + Math.floor(b);
-        } else if (e[i].step >= 1000 && e[i].step <= 10000) {
-          var c = e[i].step / 1000;
-          this.flowernum = Math.floor(c);
-        } else if (e[i].step < 1000) {
-          this.flowernum = 0;
-        };
-        this.sumflowers += this.flowernum;
-      }
-    } } };exports.default = _default;
+  methods: {} };exports.default = _default;
 
 /***/ }),
 

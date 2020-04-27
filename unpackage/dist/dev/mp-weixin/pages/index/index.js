@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
 //
 //
 //
@@ -157,8 +157,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 var _default =
 {
-  data: function data() {
-    return {
+  data: function data() {var _ref;
+    return _ref = {
+      stepsnum: 0, /*近31天总步数*/
+      flowernum: 0,
+      sumflowers: 0, /*近31天总花数*/
       /* 日期时间对象 */
       year: null,
       month: null,
@@ -171,130 +174,130 @@ var _default =
       stepclass: "steps",
       plantnum: null,
       flowerWidth: 100,
-      flowerdonghua: null,
-      flowernum: 0, /* 花数量 */
-      donghuazt: 0, /* 代表动画状态,0是正在变大,1是正在变小 */
-      allflowers: [], /* 今日的花 */
-      areaUsed: [/* 区域的使用状况 */
-      {
-        id: 0,
-        used: false },
+      flowerdonghua: null }, _defineProperty(_ref, "flowernum",
+    0), _defineProperty(_ref, "donghuazt",
+    0), _defineProperty(_ref, "allflowers",
+    []), _defineProperty(_ref, "areaUsed",
+    [/* 区域的使用状况 */
+    {
+      id: 0,
+      used: false },
 
-      {
-        id: 1,
-        used: false },
+    {
+      id: 1,
+      used: false },
 
-      {
-        id: 2,
-        used: false },
+    {
+      id: 2,
+      used: false },
 
-      {
-        id: 3,
-        used: false },
+    {
+      id: 3,
+      used: false },
 
-      {
-        id: 4,
-        used: false },
+    {
+      id: 4,
+      used: false },
 
-      {
-        id: 5,
-        used: false },
+    {
+      id: 5,
+      used: false },
 
-      {
-        id: 6,
-        used: false },
+    {
+      id: 6,
+      used: false },
 
-      {
-        id: 7,
-        used: false },
+    {
+      id: 7,
+      used: false },
 
-      {
-        id: 8,
-        used: false },
+    {
+      id: 8,
+      used: false },
 
-      {
-        id: 9,
-        used: false },
+    {
+      id: 9,
+      used: false },
 
-      {
-        id: 10,
-        used: false },
+    {
+      id: 10,
+      used: false },
 
-      {
-        id: 11,
-        used: false },
+    {
+      id: 11,
+      used: false },
 
-      {
-        id: 12,
-        used: false },
+    {
+      id: 12,
+      used: false },
 
-      {
-        id: 13,
-        used: false },
+    {
+      id: 13,
+      used: false },
 
-      {
-        id: 14,
-        used: false },
+    {
+      id: 14,
+      used: false },
 
-      {
-        id: 15,
-        used: false },
+    {
+      id: 15,
+      used: false },
 
-      {
-        id: 16,
-        used: false },
+    {
+      id: 16,
+      used: false },
 
-      {
-        id: 17,
-        used: false },
+    {
+      id: 17,
+      used: false },
 
-      {
-        id: 18,
-        used: false },
+    {
+      id: 18,
+      used: false },
 
-      {
-        id: 19,
-        used: false },
+    {
+      id: 19,
+      used: false },
 
-      {
-        id: 20,
-        used: false },
+    {
+      id: 20,
+      used: false },
 
-      {
-        id: 21,
-        used: false },
+    {
+      id: 21,
+      used: false },
 
-      {
-        id: 22,
-        used: false },
+    {
+      id: 22,
+      used: false },
 
-      {
-        id: 23,
-        used: false },
+    {
+      id: 23,
+      used: false },
 
-      {
-        id: 24,
-        used: false },
+    {
+      id: 24,
+      used: false },
 
-      {
-        id: 25,
-        used: false },
+    {
+      id: 25,
+      used: false },
 
-      {
-        id: 26,
-        used: false },
+    {
+      id: 26,
+      used: false },
 
-      {
-        id: 27,
-        used: false },
+    {
+      id: 27,
+      used: false },
 
-      {
-        id: 28,
-        used: false },
+    {
+      id: 28,
+      used: false },
 
-      {
-        id: 29,
-        used: false }] };
+    {
+      id: 29,
+      used: false }]), _ref;
 
 
 
@@ -310,6 +313,7 @@ var _default =
     setTimeout(function () {
       uni.hideLoading();
     }, 2500);
+    this.monthstepsnum(this.$store.state.stepMess);
   },
   onReady: function onReady() {
 
@@ -326,6 +330,29 @@ var _default =
     }, 1000);
   },
   methods: {
+    monthstepsnum: function monthstepsnum(e) {/*计算近31天总步数以及花朵总数*/
+      var i = 0;
+      for (; i < 30; i++) {
+        this.stepsnum += e[i].step;
+        if (e[i].step > 60000) {
+          this.flowernum = 30;
+        } else if (e[i].step > 30000 && e[i].step <= 60000) {
+          var a = e[i].step / 3000;
+          this.flowernum = 20 + Math.floor(a);
+        } else if (e[i].step > 10000 && e[i].step <= 30000) {
+          var b = e[i].step / 2000;
+          this.flowernum = 20 + Math.floor(b);
+        } else if (e[i].step >= 1000 && e[i].step <= 10000) {
+          var c = e[i].step / 1000;
+          this.flowernum = Math.floor(c);
+        } else if (e[i].step < 1000) {
+          this.flowernum = 0;
+        };
+        this.sumflowers += this.flowernum;
+      }
+      this.$store.state.stepsnum = this.stepsnum;
+      this.$store.state.sumflowers = this.sumflowers;
+    },
     getTheDateTime: function getTheDateTime() {/* 获取时间日期的方法 */
       var dt = new Date();
       this.year = dt.getFullYear();

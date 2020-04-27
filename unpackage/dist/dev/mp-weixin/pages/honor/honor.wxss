@@ -1,0 +1,33 @@
+
+.title {
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+	margin-top: 10rpx;
+	padding: 10rpx;
+	color: #3DC7C9;
+	font-size: 60rpx;
+	font-weight: 600;
+	text-align: center;
+}
+.achievement-logo {
+	width: 50rpx;
+	height: 50rpx;
+	position: absolute;
+	left: 20rpx;
+}
+.achievement-item {
+	position: relative;
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+	margin-top: 10rpx;
+	padding: 10rpx;
+	border: #000000 2rpx solid;
+	border-radius: 5%;
+	text-align: center;
+	background-color: #FCFAED;
+	color: #DCD88E;
+}
+.container{
+	margin-bottom: 50rpx;
+}
+

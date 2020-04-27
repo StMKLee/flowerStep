@@ -27,6 +27,9 @@
 	export default {
 		data() {
 			return {
+				stepsnum:0,   /*近31天总步数*/
+				flowernum:0,
+				sumflowers:0,  /*近31天总花数*/
 				/* 日期时间对象 */
 				year:null,
 				month:null,
@@ -178,6 +181,7 @@
 			setTimeout(function(){
 				uni.hideLoading();
 			},2500);
+			this.monthstepsnum(this.$store.state.stepMess);
 		},
 		onReady:function(){
 			
@@ -194,6 +198,29 @@
 			},1000)
 		},
 		methods: {
+			monthstepsnum:function(e){       /*计算近31天总步数以及花朵总数*/
+				var i=0;
+				for(;i<30;i++){
+					this.stepsnum+=e[i].step;
+					if(e[i].step>60000){
+						this.flowernum=30;
+					}else if(e[i].step>30000&&e[i].step<=60000){
+						var a = e[i].step/3000
+						this.flowernum=20+Math.floor(a)
+					}else if(e[i].step>10000&&e[i].step<=30000){
+						var b = e[i].step/2000
+						this.flowernum=20+Math.floor(b)
+					}else if(e[i].step>=1000&&e[i].step<=10000){
+						var c = e[i].step/1000
+						this.flowernum=Math.floor(c)
+					}else if(e[i].step<1000){
+						this.flowernum=0
+					};
+					this.sumflowers+=this.flowernum;
+				}
+				this.$store.state.stepsnum=this.stepsnum;
+				this.$store.state.sumflowers=this.sumflowers;
+			},
 			getTheDateTime:function(){       /* 获取时间日期的方法 */
 				var dt = new Date();
 				this.year=dt.getFullYear();
