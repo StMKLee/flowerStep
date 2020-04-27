@@ -1,1 +1,1 @@
-<view class="container"><view class="Logo"><image src="../../static/images/teamicon.png" mode></image></view><view class="title"><text>印迹园丁</text></view><view class="text"><view>{{''+text+''}}</view><view class="textstyle">{{''+text2+''}}</view></view></view>
+<view class="container"><view class="Logo"><view class="logoimg"></view></view><view class="title"><text>印迹园丁</text></view><view class="text"><view class="wenben">{{''+text+''}}</view><view class="textstyle">{{''+text2+''}}</view></view></view>

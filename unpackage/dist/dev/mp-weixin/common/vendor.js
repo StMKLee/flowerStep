@@ -1561,9 +1561,9 @@ uni$1;exports.default = _default;
 /***/ }),
 
 /***/ 122:
-/*!***************************************************!*\
-  !*** D:/flowerStep/components/uni-icons/icons.js ***!
-  \***************************************************/
+/*!**************************************************************************!*\
+  !*** D:/work/Hbuilder/projects/flowerStep/components/uni-icons/icons.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1832,9 +1832,9 @@ function normalizeComponent (
 /***/ }),
 
 /***/ 15:
-/*!************************************!*\
-  !*** D:/flowerStep/store/index.js ***!
-  \************************************/
+/*!***********************************************************!*\
+  !*** D:/work/Hbuilder/projects/flowerStep/store/index.js ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8878,9 +8878,9 @@ module.exports = g;
 /***/ }),
 
 /***/ 4:
-/*!********************************!*\
-  !*** D:/flowerStep/pages.json ***!
-  \********************************/
+/*!*******************************************************!*\
+  !*** D:/work/Hbuilder/projects/flowerStep/pages.json ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9787,9 +9787,9 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ }),
 
 /***/ 7:
-/*!*************************************************!*\
-  !*** D:/flowerStep/pages.json?{"type":"style"} ***!
-  \*************************************************/
+/*!************************************************************************!*\
+  !*** D:/work/Hbuilder/projects/flowerStep/pages.json?{"type":"style"} ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9799,9 +9799,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /***/ }),
 
 /***/ 8:
-/*!************************************************!*\
-  !*** D:/flowerStep/pages.json?{"type":"stat"} ***!
-  \************************************************/
+/*!***********************************************************************!*\
+  !*** D:/work/Hbuilder/projects/flowerStep/pages.json?{"type":"stat"} ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
