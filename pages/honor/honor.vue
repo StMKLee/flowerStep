@@ -4,9 +4,12 @@
 			{{titlecontent}}
 		</view>
 		<view class="content" v-for="(item,index) in achievement" :key="index">
-			<view class="achievement-item" :name="item.name">
+			<view class="achievement-item" :name="item.name" :class="{checked:item.nocheck}">
 				<image :src="item.src" mode="" class="achievement-logo"></image>
 				{{item.name}}
+				<view class="tips">
+					{{item.tip}}
+				</view>
 			</view>
 		</view>
 	</view>
@@ -22,166 +25,217 @@
 					{
 						id:0,
 						name: "第一朵花",
-						src: "../../static/images/king.png"
+						src: "../../static/images/king.png",
+						tip: "首次获得一朵花",
+						nocheck:true
 					},
 					{
 						id:1,
 						name: "活力迸发",
-						src: "../../static/images/king.png"
+						src: "../../static/images/king.png",
+						tip: "一天内步数达到5000步",
+						nocheck:true
 					},
 					{
 						id:2,
 						name: "活力迸发II",
-						src: "../../static/images/king.png"
+						src: "../../static/images/king.png",
+						tip: "一天内步数达到10000步",
+						nocheck:true
 					},
 					{
 						id:3,
 						name: "活力迸发III",
-						src: "../../static/images/king.png"
+						src: "../../static/images/king.png",
+						tip: "一天内步数达到30000步",
+						nocheck:true
 					},
 					{
 						id:4,
-						name: "低碳生活",
-						src: "../../static/images/king.png"
+						name: "活力无限",
+						src: "../../static/images/king.png",
+						tip: "一天内步数达到60000步",
+						nocheck:true
 					},
 					{
 						id:5,
-						name: "低碳生活II",
-						src: "../../static/images/king.png"
+						name: "低碳生活",
+						src: "../../static/images/king.png",
+						tip: "一个月内步数共达15万",
+						nocheck:true
 					},
 					{
 						id:6,
-						name: "低碳生活III",
-						src: "../../static/images/king.png"
+						name: "低碳生活II",
+						src: "../../static/images/king.png",
+						tip: "一个月内步数共达30万",
+						nocheck:true
 					},
 					{
 						id:7,
-						name: "园丁",
-						src: "../../static/images/king.png"
+						name: "低碳生活III",
+						src: "../../static/images/king.png",
+						tip: "一个月内步数共达45万",
+						nocheck:true
 					},
 					{
 						id:8,
-						name: "园丁II",
-						src: "../../static/images/king.png"
+						name: "低碳战士",
+						src: "../../static/images/king.png",
+						tip: "一个月内步数共达60万",
+						nocheck:true
 					},
 					{
 						id:9,
-						name: "园丁III",
-						src: "../../static/images/king.png"
+						name: "植物学家",
+						src: "../../static/images/king.png",
+						tip: "解锁3种花",
+						nocheck:true
 					},
 					{
 						id:10,
-						name: "种植大师",
-						src: "../../static/images/king.png"
+						name: "植物学家II",
+						src: "../../static/images/king.png",
+						tip: "解锁5种花",
+						nocheck:true
 					},
 					{
 						id:11,
-						name: "植物学家",
-						src: "../../static/images/king.png"
+						name: "植物学家III",
+						src: "../../static/images/king.png",
+						tip: "解锁8种花",
+						nocheck:true
 					},
 					{
 						id:12,
-						name: "植物学家II",
-						src: "../../static/images/king.png"
+						name: "植物活百科",
+						src: "../../static/images/king.png",
+						tip: "解锁12种花",
+						nocheck:true
 					},
 					{
 						id:13,
-						name: "植物学家III",
-						src: "../../static/images/king.png"
+						name: "园丁",
+						src: "../../static/images/king.png",
+						tip: "至今共得50朵花",
+						nocheck:true
 					},
 					{
 						id:14,
-						name: "植物活百科",
-						src: "../../static/images/king.png"
+						name: "园丁II",
+						src: "../../static/images/king.png",
+						tip: "至今共得200朵花",
+						nocheck:true
 					},
+					{
+						id:15,
+						name: "园丁III",
+						src: "../../static/images/king.png",
+						tip: "至今共得500朵花",
+						nocheck:true
+					},
+					{
+						id:16,
+						name: "种植大师",
+						src: "../../static/images/king.png",
+						tip: "至今共得1000朵花",
+						nocheck:true
+					}
 				]
 			}
 		},
 		onLoad:function(){
-			// 成就"第一朵花"与"园丁"判定
-			this.CheckAchOne(this.$store.state.sumflowers);
-			// 成就"活力迸发"判定
-			this.CheckAchTwo(this.$store.state.stepMess);
-			// 成就"低碳生活"判定
-			this.CheckAchThree(this.$store.state.stepsnum);
-			// 成就"植物学家"判定
-			this.CheckAchFour(this.$store.state.userData);
+			this.checkHonor();		/* 检测方法 */
 		},
 		methods: {
-			CheckAchOne:function(e){
-				if(e){
-					this.achievement[0].src="../../static/images/king_checked.png"
-				}
-				if(e>500){
-					this.achievement[10].src="../../static/images/king_checked.png";
-					this.achievement[9].src="../../static/images/king_checked.png";
-					this.achievement[8].src="../../static/images/king_checked.png";
-					this.achievement[7].src="../../static/images/king_checked.png";
-				}
-				else if(e>300){
-					this.achievement[9].src="../../static/images/king_checked.png";
-					this.achievement[8].src="../../static/images/king_checked.png";
-					this.achievement[7].src="../../static/images/king_checked.png";
-				}
-				else if(e>100){
-					this.achievement[8].src="../../static/images/king_checked.png";
-					this.achievement[7].src="../../static/images/king_checked.png";
-				}
-				else if(e>30){
-					this.achievement[7].src="../../static/images/king_checked.png";
-				}
-			},
-			CheckAchTwo:function(e){
-				if(e[30].step>60000){
-					this.achievement[3].src="../../static/images/king_checked.png";
-					this.achievement[2].src="../../static/images/king_checked.png";
-					this.achievement[1].src="../../static/images/king_checked.png";
-				}
-				else if(e[30].step>30000){
-					this.achievement[2].src="../../static/images/king_checked.png";
-					this.achievement[1].src="../../static/images/king_checked.png";
-				}
-				else if(e[30].step>10000){
-					this.achievement[1].src="../../static/images/king_checked.png"
-				}
-			},
-			CheckAchThree:function(e){
-				if(e>500000){
-					this.achievement[6].src="../../static/images/king_checked.png";
-					this.achievement[5].src="../../static/images/king_checked.png";
-					this.achievement[4].src="../../static/images/king_checked.png";
-				}
-				else if(e>300000){
-					this.achievement[5].src="../../static/images/king_checked.png";
-					this.achievement[4].src="../../static/images/king_checked.png";
-				}
-				else if(e>100000){
-					this.achievement[4].src="../../static/images/king_checked.png";
-				}
-			},
-			CheckAchFour:function(e){
-				var i = 0;
-				for(;i<12;i++){
-					this.UnlockFlowers+=e.floNum[i]
-				}
-				console.log(this.UnlockFlowers)
-				if(this.UnlockFlowers==12){
-					this.achievement[14].src="../../static/images/king_checked.png";
-					this.achievement[13].src="../../static/images/king_checked.png";
-					this.achievement[12].src="../../static/images/king_checked.png";
-					this.achievement[11].src="../../static/images/king_checked.png";
-				}
-				else if(this.UnlockFlowers>=8){
-					this.achievement[13].src="../../static/images/king_checked.png";
-					this.achievement[12].src="../../static/images/king_checked.png";
-					this.achievement[11].src="../../static/images/king_checked.png";
-				}
-				else if(this.UnlockFlowers>=5){
-					this.achievement[12].src="../../static/images/king_checked.png";
-					this.achievement[11].src="../../static/images/king_checked.png";
-				}
-				else if(this.UnlockFlowers>=3){
-					this.achievement[11].src="../../static/images/king_checked.png";
+			checkHonor:function(){
+				if(this.$store.state.userData===undefined){
+					console.log("用户数据未定义");
+				}else{
+					var fnum=this.$store.state.userData.floNum;
+					if(fnum[0]>0){		/* 第一朵花 */
+						this.achievement[0].src="../../static/images/king_checked.png";
+						this.achievement[0].nocheck=false;
+					};
+					/* 园丁类的判断 */
+					var fsum=fnum[0]+fnum[1]+fnum[2]+fnum[3]+fnum[4]+fnum[5]+fnum[6]+fnum[7]+fnum[8]+fnum[9]+fnum[10]+fnum[11];
+					if(fsum>=50){
+						this.achievement[13].src="../../static/images/king_checked.png";
+						this.achievement[13].nocheck=false;
+					};
+					if(fsum>=200){
+						this.achievement[14].src="../../static/images/king_checked.png";
+						this.achievement[14].nocheck=false;
+					};
+					if(fsum>=500){
+						this.achievement[15].src="../../static/images/king_checked.png";
+						this.achievement[15].nocheck=false;
+					};
+					if(fsum>=1000){
+						this.achievement[16].src="../../static/images/king_checked.png";
+						this.achievement[16].nocheck=false;
+					};
+					/* 植物学家类判断 */
+					var typenum=0;
+					for (var i=0;i<fnum.length;i++) {
+						if(fnum[i]>0){
+							typenum+=1;
+						}else{
+							continue;
+						}
+					};
+					if(typenum>=3){
+						this.achievement[9].src="../../static/images/king_checked.png";
+						this.achievement[9].nocheck=false;
+					};
+					if(typenum>=5){
+						this.achievement[10].src="../../static/images/king_checked.png";
+						this.achievement[10].nocheck=false;
+					};
+					if(typenum>=8){
+						this.achievement[11].src="../../static/images/king_checked.png";
+						this.achievement[11].nocheck=false;
+					};
+					if(typenum>=12){
+						this.achievement[12].src="../../static/images/king_checked.png";
+						this.achievement[12].nocheck=false;
+					};
+					/* 活力类判断 */
+					var todaynum=this.$store.state.stepMess;
+					if(todaynum>=5000){
+						this.achievement[1].src="../../static/images/king_checked.png";
+						this.achievement[1].nocheck=false;
+					};
+					if(todaynum>=10000){
+						this.achievement[2].src="../../static/images/king_checked.png";
+						this.achievement[2].nocheck=false;
+					};
+					if(todaynum>=30000){
+						this.achievement[3].src="../../static/images/king_checked.png";
+						this.achievement[3].nocheck=false;
+					};
+					if(todaynum>=60000){
+						this.achievement[4].src="../../static/images/king_checked.png";
+						this.achievement[4].nocheck=false;
+					};
+					/* 低碳类判断 */
+					var monthnum=this.$store.state.stepsnum;
+					if(monthnum>=150000){
+						this.achievement[5].src="../../static/images/king_checked.png";
+						this.achievement[5].nocheck=false;
+					};
+					if(monthnum>=300000){
+						this.achievement[6].src="../../static/images/king_checked.png";
+						this.achievement[6].nocheck=false;
+					};
+					if(monthnum>=450000){
+						this.achievement[7].src="../../static/images/king_checked.png";
+						this.achievement[7].nocheck=false;
+					};
+					if(monthnum>=600000){
+						this.achievement[8].src="../../static/images/king_checked.png";
+						this.achievement[8].nocheck=false;
+					};
 				}
 			}
 		}
@@ -216,11 +270,26 @@
 		border: #000000 2rpx solid;
 		border-radius: 5%;
 		text-align: center;
-		background-color: #FCFAED;
-		color: #DCD88E;
+		background-color: #9c7d4c;
+		color: #e3b81d;
 	}
 	
 	.container{
 		margin-bottom: 50rpx;
+	}
+	
+	.checked{
+		background-color: #d9d2cd;
+		color: #ffffff;
+	}
+	
+	.tips{
+		font-size: 30rpx;
+		color: #56d700;
+	}
+	
+	.checked .tips{
+		font-size: 35rpx;
+		color: #9fab94;
 	}
 </style>

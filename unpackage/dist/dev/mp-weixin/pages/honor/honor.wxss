@@ -24,10 +24,22 @@
 	border: #000000 2rpx solid;
 	border-radius: 5%;
 	text-align: center;
-	background-color: #FCFAED;
-	color: #DCD88E;
+	background-color: #9c7d4c;
+	color: #e3b81d;
 }
 .container{
 	margin-bottom: 50rpx;
+}
+.checked{
+	background-color: #d9d2cd;
+	color: #ffffff;
+}
+.tips{
+	font-size: 30rpx;
+	color: #56d700;
+}
+.checked .tips{
+	font-size: 35rpx;
+	color: #9fab94;
 }
 
