@@ -166,7 +166,8 @@
 		box-sizing: border-box;        /* 设置宽高尺寸为padding尺寸和border尺寸之和 */
 	}
 	page{
-		background-image: url("http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq3f4Y7iPfx46tWEvgQhztDVYa1XvlRj5Po5h5hmUgINjB8qxGNL4kQnkQRIro0eDfQ!!/mnull&bo=9AHlAgAAAAARByI!&rf=photolist&t=5");
+		background-image: url("http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxeNWYxbhpcyHTduW2Edpvxr70AFMIZC445KXJtlKydjbtcjdg0geJ2rk6gO83yMQg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5");
+		background-color: #f0ebc2;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
@@ -185,45 +186,44 @@
 	.title{
 		width: 750rpx;
 		height: auto;
-		font-size: 70rpx;
+		font-size: 60rpx;
 		font-weight: 800;
 		color: #b7732e;
-		margin-top: 30rpx;
+		margin-top: 20rpx;
 		margin-bottom: 20rpx;
 		padding-bottom: 10rpx;
-		border-bottom: #cfd98c 2px solid;
 		text-align: center;
 	}
 	.flowers{
 		box-sizing: border-box;
-		width: 300rpx;
+		width: 200rpx;
 		height: auto;
-		border-color: #714819;
-		border-radius: 10rpx;
-		border-width: 10rpx;
-		border-style: solid;
-		margin-top: 20rpx;
-		margin-left: 50rpx;
+		background-color: #c1e2f3;
+		border-color: #54c7e9;
+		border-radius: 8rpx;
+		border-width: 8rpx;
+		border-style: dotted;
+		margin-top: 25rpx;
+		margin-left: 80rpx;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
 	.flowerimg{
-		width: 250rpx;
-		height: 250rpx;
+		width: 150rpx;
+		height: 150rpx;
 		margin-top: 20rpx;
 		margin-bottom: 15rpx;
-		border: #9c7722 5rpx solid;
 		border-radius: 5rpx;
 	}
 	.flowertip{
 		text-align: center;
-		width: 300rpx;
+		width: 200rpx;
 		height: auto;
-		font-size: 40rpx;
+		font-size: 30rpx;
 		font-weight: 500;
 		color: #002145;
-		border-top: #450000 3rpx solid;
+		border-top: #b2de51 3rpx solid;
 		padding-top: 10rpx;
 		margin-bottom: 5rpx;
 	}
@@ -233,7 +233,7 @@
 		align-items: center;
 		width: 750rpx;
 		height: auto;
-		margin-top: 30rpx;
+		margin-top: 100rpx;
 		margin-bottom: 10rpx;
 	}
 </style>

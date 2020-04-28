@@ -243,6 +243,9 @@
 </script>
 
 <style>
+	page{
+		background-color: #ecf4c4;
+	}
 	.title {
 		margin-left: 10rpx;
 		margin-right: 10rpx;
