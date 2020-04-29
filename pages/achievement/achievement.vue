@@ -190,7 +190,7 @@
 		font-weight: 800;
 		color: #b7732e;
 		margin-top: 20rpx;
-		margin-bottom: 20rpx;
+		margin-bottom: 40rpx;
 		padding-bottom: 10rpx;
 		text-align: center;
 	}
@@ -198,12 +198,12 @@
 		box-sizing: border-box;
 		width: 200rpx;
 		height: auto;
-		background-color: #c1e2f3;
+		background-color: #f1f9f9;
 		border-color: #54c7e9;
 		border-radius: 8rpx;
-		border-width: 8rpx;
-		border-style: dotted;
-		margin-top: 25rpx;
+		border-width: 3rpx;
+		border-style: outset;
+		margin-top: 35rpx;
 		margin-left: 80rpx;
 		display: flex;
 		flex-direction: column;
@@ -223,7 +223,6 @@
 		font-size: 30rpx;
 		font-weight: 500;
 		color: #002145;
-		border-top: #b2de51 3rpx solid;
 		padding-top: 10rpx;
 		margin-bottom: 5rpx;
 	}
