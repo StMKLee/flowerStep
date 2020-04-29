@@ -251,7 +251,7 @@
 		margin-right: 10rpx;
 		margin-top: 10rpx;
 		padding: 10rpx;
-		color: #3DC7C9;
+		color: #FEC728;
 		font-size: 60rpx;
 		font-weight: 600;
 		text-align: center;
@@ -261,6 +261,7 @@
 		width: 50rpx;
 		height: 50rpx;
 		position: absolute;
+		top: 20rpx;
 		left: 20rpx;
 	}
 
@@ -273,8 +274,9 @@
 		border: #000000 2rpx solid;
 		border-radius: 5%;
 		text-align: center;
-		background-color: #9c7d4c;
-		color: #e3b81d;
+		background-color: #E08047;
+		color: #FEC728;
+		font-size: 40rpx;
 	}
 	
 	.container{
@@ -287,12 +289,12 @@
 	}
 	
 	.tips{
-		font-size: 30rpx;
-		color: #56d700;
+		font-size: 25rpx;
+		color: #FEC728;
 	}
 	
 	.checked .tips{
-		font-size: 35rpx;
-		color: #9fab94;
+		font-size: 25rpx;
+		color: #FFFFFF;
 	}
 </style>

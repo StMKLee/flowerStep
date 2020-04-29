@@ -1,0 +1,45 @@
+
+page {
+	background-color: #ecf4c4;
+}
+.flowersname {
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+	margin-top: 10rpx;
+	padding: 10rpx;
+	color: #333333;
+	font-size: 60rpx;
+	font-weight: 600;
+	text-align: center;
+}
+image {
+	border: 1rpx rgba(250, 214, 137, 0.5) solid;
+	border-radius: 15%;
+	width: 400rpx;
+	height: 400rpx;
+	position: relative;
+	left: 180rpx;
+	background-color: rgba(250, 214, 137, 0.5);
+	margin-top: 10rpx;
+}
+.detail {
+	font-weight: 600;
+}
+.flowerscontent,
+.flowersnum {
+	margin-left: 15rpx;
+	margin-right: 15rpx;
+	margin-top: 10rpx;
+	padding: 15rpx;
+	color: #333333;
+}
+.flowerscontent {
+	border: 1rpx rgba(250, 214, 137, 0.5) solid;
+	background-color: rgba(250, 214, 137, 0.5);
+	border-radius: 5%;
+}
+.flowersnum {
+	font-weight: 600;
+	text-align: center;
+}
+
