@@ -198,7 +198,7 @@
 		box-sizing: border-box;
 		width: 200rpx;
 		height: auto;
-		background-color: #f1f9f9;
+		background-color: rgba(250, 214, 137, 0.5);
 		border-color: #54c7e9;
 		border-radius: 8rpx;
 		border-width: 3rpx;

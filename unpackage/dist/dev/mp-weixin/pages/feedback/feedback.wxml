@@ -1,1 +1,1 @@
-<view><view class="container"><uni-card vue-id="2d23d9a0-1" title="意见反馈" thumbnail="../../static/images/line.png" bind:__l="__l" vue-slots="{{['default']}}"><view>如果有什么建议或疑问请发邮件到以下邮箱地址：</view><view>123456789@qq.com</view></uni-card></view></view>
+<view><view class="container"><uni-card vue-id="2d23d9a0-1" title="意见反馈" thumbnail="../../static/images/line.png" bind:__l="__l" vue-slots="{{['default']}}"><view>如果有什么建议或疑问请发邮件到以下邮箱地址：</view><view>flowerStep@163.com</view></uni-card></view></view>

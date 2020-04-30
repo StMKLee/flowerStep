@@ -28,7 +28,6 @@
 		data() {
 			return {
 				stepsnum:0,   /*近31天总步数*/
-				flowernum:0,
 				sumflowers:0,  /*近31天总花数*/
 				/* 日期时间对象 */
 				year:null,
