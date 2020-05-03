@@ -8,6 +8,23 @@ page{
 	opacity: 0;
 	position: fixed;
 	bottom: 0;
-	left: 40%;
+	width: 750rpx;
+	height: auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.plantin{
+	opacity: 0.7;
+	background-color: #900000;
+	width: 380rpx;
+	height: 130rpx;
+	text-align: center;
 }
 

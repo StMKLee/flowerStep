@@ -169,7 +169,7 @@
 		background-image: url("http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxeNWYxbhpcyHTduW2Edpvxr70AFMIZC445KXJtlKydjbtcjdg0geJ2rk6gO83yMQg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5");
 		background-color: #f0ebc2;
 		background-repeat: no-repeat;
-		background-size: 100% 100%;
+		background-size: cover;
 	}
 	.container{
 		width: 750rpx;
@@ -204,7 +204,7 @@
 		border-width: 3rpx;
 		border-style: outset;
 		margin-top: 35rpx;
-		margin-left: 80rpx;
+		margin-left: 116rpx;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

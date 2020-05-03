@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="plant">
-			<button type="default" @click="jumpto">Plant</button>
+			<view @click="jumpto" class="plantin">Plant</view>
 		</view>
 	</view>
 </template>
@@ -36,6 +36,17 @@ page{
 	opacity: 0;
 	position: fixed;
 	bottom: 0;
-	left: 40%;
+	width: 750rpx;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.plantin{
+	opacity: 0.7;
+	background-color: #900000;
+	width: 380rpx;
+	height: 130rpx;
+	text-align: center;
 }
 </style>
