@@ -266,12 +266,42 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     getNew: function getNew(e) {/* 获取图鉴新解锁的花朵 */
-      if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5") {
-        this.flowersbook[0].name = "a花";
-        this.flowersbook[0].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
-      } else if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq20p7yiWK.v*cClX1OEumLAglMrFuX.mWpdsXymb7xm*dN.Tdguke8.rziwjf6pkmw!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5") {
-        this.flowersbook[1].name = "b花";
-        this.flowersbook[1].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq20p7yiWK.v*cClX1OEumLAglMrFuX.mWpdsXymb7xm*dN.Tdguke8.rziwjf6pkmw!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
+      if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqyqcuYnnrftx73ONwRvSCtes5zcvz560jDmAGFZsvPnLxGd5MxfH1cn*L.tHnoq10Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5") {
+        this.flowersbook[0].name = "使君子";
+        this.flowersbook[0].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqyqcuYnnrftx73ONwRvSCtes5zcvz560jDmAGFZsvPnLxGd5MxfH1cn*L.tHnoq10Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+      } else if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8ncN1PxDW8m.j*qCBpPIMI2OPS.flq0Zcp3gQ90*CLkZmvdhpah2xMNSbImFApJyg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5") {
+        this.flowersbook[1].name = "风信子";
+        this.flowersbook[1].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8ncN1PxDW8m.j*qCBpPIMI2OPS.flq0Zcp3gQ90*CLkZmvdhpah2xMNSbImFApJyg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+      } else if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.4w81BWUnLsxg13yvScF7o2u**PDamNVx*Z4VY3XUfw2ZDCRmYtisTHpGygzexrfw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5") {
+        this.flowersbook[2].name = "三叶草";
+        this.flowersbook[2].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.4w81BWUnLsxg13yvScF7o2u**PDamNVx*Z4VY3XUfw2ZDCRmYtisTHpGygzexrfw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+      } else if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5") {
+        this.flowersbook[3].name = "四叶草";
+        this.flowersbook[3].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+      } else if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq6jYdGy.7KxX8SEjTysGlKR91UoDFH6WPcI4TM1PUQbqAp7bVCUivrhGDS9Pm7G*NA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5") {
+        this.flowersbook[4].name = "满天星";
+        this.flowersbook[4].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq6jYdGy.7KxX8SEjTysGlKR91UoDFH6WPcI4TM1PUQbqAp7bVCUivrhGDS9Pm7G*NA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+      } else if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2ZkyhccbGWECCredKj*pEauZsz9kUzITxfu4cljpKYFGju0z4kVzbKnrX1CGQfg1Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5") {
+        this.flowersbook[5].name = "紫罗兰";
+        this.flowersbook[5].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2ZkyhccbGWECCredKj*pEauZsz9kUzITxfu4cljpKYFGju0z4kVzbKnrX1CGQfg1Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+      } else if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aqw5hw8FVpD7106DUsTLM3F10o3SUyYCbBgJxh2HxUDT.FN68ObekRPEe61o1yo2.Fg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5") {
+        this.flowersbook[6].name = "樱花";
+        this.flowersbook[6].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aqw5hw8FVpD7106DUsTLM3F10o3SUyYCbBgJxh2HxUDT.FN68ObekRPEe61o1yo2.Fg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+      } else if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqzfPdQOrJBUlSWHxBpDP.RWYdr6bUvURfnF6FVvr3x73eaK0QZLAMef4Slr7j9Pkqg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5") {
+        this.flowersbook[7].name = "向日葵";
+        this.flowersbook[7].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqzfPdQOrJBUlSWHxBpDP.RWYdr6bUvURfnF6FVvr3x73eaK0QZLAMef4Slr7j9Pkqg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+      } else if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq0fQMuXeH1KWAiQqobyyD6xDOehtPLNwd5ERlse7wiqtfMfcHKqyAFFjG0V9QnBh0A!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5") {
+        this.flowersbook[8].name = "金茶花";
+        this.flowersbook[8].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq0fQMuXeH1KWAiQqobyyD6xDOehtPLNwd5ERlse7wiqtfMfcHKqyAFFjG0V9QnBh0A!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+      } else if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxgrHlUGfsibUffq2A9PDDLcFK5aNYMQN3*PvxfN1du0QnWe2cnmUSa3Z8V9E*aZxg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5") {
+        this.flowersbook[9].name = "巨魔芋";
+        this.flowersbook[9].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxgrHlUGfsibUffq2A9PDDLcFK5aNYMQN3*PvxfN1du0QnWe2cnmUSa3Z8V9E*aZxg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+      } else if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5lvU8eEqlOqEit0RjKnb*EV*vHpzZ6NGTQ6GqUBdNtyxi0RwiX1m8xpylanKynBTA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5") {
+        this.flowersbook[10].name = "生石花";
+        this.flowersbook[10].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5lvU8eEqlOqEit0RjKnb*EV*vHpzZ6NGTQ6GqUBdNtyxi0RwiX1m8xpylanKynBTA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+      } else if (e == "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq0HkSTz531PCOu*PaK11iriW025VAd9Bo3G6YUpnpvoQ59S.QCLrZEGx*ok*Hc2zJA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5") {
+        this.flowersbook[11].name = "希望之花";
+        this.flowersbook[11].imgsrc = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq0HkSTz531PCOu*PaK11iriW025VAd9Bo3G6YUpnpvoQ59S.QCLrZEGx*ok*Hc2zJA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
       }
     },
     jumptoflowerdetail: function jumptoflowerdetail(e) {

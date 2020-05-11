@@ -469,29 +469,149 @@ var _default =
         var z = Math.floor(y); /* 决定花位置 */
         var zhonglei; /* 表示是什么花 */
         var weizhi; /* 表示花的位置 */
+        var floidx = hadFlonum + i + 1; /* 表示第几朵花 */
 
-        /* 以下算法表示小于9朵花时全部出a花,大于等于9朵花时第9朵开始0.75的概率出a花,0.25的概率出b花 */
-        if (allFlonum < 9) {
-          zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
-          this.ihave(zhonglei);
-          this.$store.state.userData.floNum[0] += 1;
-        } else if (allFlonum >= 9) {
-          if (hadFlonum + i + 1 < 9) {
-            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
+        /* 花的算法，具体算法参考文档 */
+        if (floidx <= 3) {
+          if (x <= 0.95) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqyqcuYnnrftx73ONwRvSCtes5zcvz560jDmAGFZsvPnLxGd5MxfH1cn*L.tHnoq10Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
             this.ihave(zhonglei);
-            this.$store.state.userData.floNum[0] += 1;
-          } else if (hadFlonum + i + 1 >= 9) {
-            if (x <= 0.75) {
-              zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.QVIHyOimd.aaUtt0GfF*e9iWU5mOU3OQ5cobOAxB.eaI3j1uQGrrS4YXr4OlvCaA!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
-              this.ihave(zhonglei);
-              this.$store.state.userData.floNum[0] += 1;
-            } else {
-              zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq20p7yiWK.v*cClX1OEumLAglMrFuX.mWpdsXymb7xm*dN.Tdguke8.rziwjf6pkmw!!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5";
-              this.ihave(zhonglei);
-              this.$store.state.userData.floNum[1] += 1;
-            };
+          } else if (x > 0.95) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8ncN1PxDW8m.j*qCBpPIMI2OPS.flq0Zcp3gQ90*CLkZmvdhpah2xMNSbImFApJyg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
           }
-        };
+        } else if (floidx >= 4 && floidx <= 8) {
+          if (x <= 0.6) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqyqcuYnnrftx73ONwRvSCtes5zcvz560jDmAGFZsvPnLxGd5MxfH1cn*L.tHnoq10Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.6 && x <= 0.85) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8ncN1PxDW8m.j*qCBpPIMI2OPS.flq0Zcp3gQ90*CLkZmvdhpah2xMNSbImFApJyg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.85) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq6jYdGy.7KxX8SEjTysGlKR91UoDFH6WPcI4TM1PUQbqAp7bVCUivrhGDS9Pm7G*NA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          }
+        } else if (floidx >= 9 && floidx <= 10) {
+          if (x <= 0.999) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.4w81BWUnLsxg13yvScF7o2u**PDamNVx*Z4VY3XUfw2ZDCRmYtisTHpGygzexrfw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.999) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          }
+        } else if (floidx >= 11 && floidx <= 14) {
+          if (x <= 0.3) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqyqcuYnnrftx73ONwRvSCtes5zcvz560jDmAGFZsvPnLxGd5MxfH1cn*L.tHnoq10Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.3 && x <= 0.55) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8ncN1PxDW8m.j*qCBpPIMI2OPS.flq0Zcp3gQ90*CLkZmvdhpah2xMNSbImFApJyg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.55 && x <= 0.8) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq6jYdGy.7KxX8SEjTysGlKR91UoDFH6WPcI4TM1PUQbqAp7bVCUivrhGDS9Pm7G*NA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.8 && x <= 0.95) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aqw5hw8FVpD7106DUsTLM3F10o3SUyYCbBgJxh2HxUDT.FN68ObekRPEe61o1yo2.Fg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.95) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2ZkyhccbGWECCredKj*pEauZsz9kUzITxfu4cljpKYFGju0z4kVzbKnrX1CGQfg1Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          }
+        } else if (floidx == 15) {
+          if (x <= 0.98) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.4w81BWUnLsxg13yvScF7o2u**PDamNVx*Z4VY3XUfw2ZDCRmYtisTHpGygzexrfw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.98) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          }
+        } else if (floidx >= 16 && floidx <= 19) {
+          if (x <= 0.2) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqyqcuYnnrftx73ONwRvSCtes5zcvz560jDmAGFZsvPnLxGd5MxfH1cn*L.tHnoq10Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.2 && x <= 0.4) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8ncN1PxDW8m.j*qCBpPIMI2OPS.flq0Zcp3gQ90*CLkZmvdhpah2xMNSbImFApJyg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.4 && x <= 0.6) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq6jYdGy.7KxX8SEjTysGlKR91UoDFH6WPcI4TM1PUQbqAp7bVCUivrhGDS9Pm7G*NA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.6 && x <= 0.8) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aqw5hw8FVpD7106DUsTLM3F10o3SUyYCbBgJxh2HxUDT.FN68ObekRPEe61o1yo2.Fg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.8) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2ZkyhccbGWECCredKj*pEauZsz9kUzITxfu4cljpKYFGju0z4kVzbKnrX1CGQfg1Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          }
+        } else if (floidx == 20) {
+          if (x <= 0.9) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.4w81BWUnLsxg13yvScF7o2u**PDamNVx*Z4VY3XUfw2ZDCRmYtisTHpGygzexrfw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.9) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          }
+        } else if (floidx >= 21 && floidx <= 24) {
+          if (x <= 0.3) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aqw5hw8FVpD7106DUsTLM3F10o3SUyYCbBgJxh2HxUDT.FN68ObekRPEe61o1yo2.Fg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.3 && x <= 0.6) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2ZkyhccbGWECCredKj*pEauZsz9kUzITxfu4cljpKYFGju0z4kVzbKnrX1CGQfg1Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.6 && x <= 0.8) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqzfPdQOrJBUlSWHxBpDP.RWYdr6bUvURfnF6FVvr3x73eaK0QZLAMef4Slr7j9Pkqg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.8 && x <= 0.895) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.4w81BWUnLsxg13yvScF7o2u**PDamNVx*Z4VY3XUfw2ZDCRmYtisTHpGygzexrfw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.895 && x <= 0.9) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.9) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5lvU8eEqlOqEit0RjKnb*EV*vHpzZ6NGTQ6GqUBdNtyxi0RwiX1m8xpylanKynBTA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          }
+        } else if (floidx >= 25 && floidx <= 27) {
+          if (x <= 0.2) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2ZkyhccbGWECCredKj*pEauZsz9kUzITxfu4cljpKYFGju0z4kVzbKnrX1CGQfg1Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.2 && x <= 0.4) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqzfPdQOrJBUlSWHxBpDP.RWYdr6bUvURfnF6FVvr3x73eaK0QZLAMef4Slr7j9Pkqg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.4 && x <= 0.6) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5lvU8eEqlOqEit0RjKnb*EV*vHpzZ6NGTQ6GqUBdNtyxi0RwiX1m8xpylanKynBTA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.6 && x <= 0.75) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.4w81BWUnLsxg13yvScF7o2u**PDamNVx*Z4VY3XUfw2ZDCRmYtisTHpGygzexrfw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.75 && x <= 0.8) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.8 && x <= 0.9) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq0fQMuXeH1KWAiQqobyyD6xDOehtPLNwd5ERlse7wiqtfMfcHKqyAFFjG0V9QnBh0A!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.9) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxgrHlUGfsibUffq2A9PDDLcFK5aNYMQN3*PvxfN1du0QnWe2cnmUSa3Z8V9E*aZxg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          }
+        } else if (floidx == 28) {
+          if (x <= 0.7) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq0fQMuXeH1KWAiQqobyyD6xDOehtPLNwd5ERlse7wiqtfMfcHKqyAFFjG0V9QnBh0A!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.7) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          }
+        } else if (floidx == 29) {
+          if (x <= 0.7) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxgrHlUGfsibUffq2A9PDDLcFK5aNYMQN3*PvxfN1du0QnWe2cnmUSa3Z8V9E*aZxg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          } else if (x > 0.7) {
+            zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+            this.ihave(zhonglei);
+          }
+        } else if (floidx == 30) {
+          zhonglei = "http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq0HkSTz531PCOu*PaK11iriW025VAd9Bo3G6YUpnpvoQ59S.QCLrZEGx*ok*Hc2zJA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+          this.ihave(zhonglei);
+        }
 
         wx.cloud.callFunction({ /* 统计花数量,存入数据库 */
           name: 'incFlo',
