@@ -40,7 +40,7 @@
 				showStep:0,
 				stepclass:"steps",
 				plantnum:null,
-				flowerWidth:100,
+				flowerWidth:150,
 				flowerdonghua:null,
 				flowernum:0,		/* 花数量 */
 				donghuazt:0,		/* 代表动画状态,0是正在变大,1是正在变小 */
@@ -342,142 +342,142 @@
 					/* 花的算法，具体算法参考文档 */
 					if(floidx<=3){
 						if(x<=0.95){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqyqcuYnnrftx73ONwRvSCtes5zcvz560jDmAGFZsvPnLxGd5MxfH1cn*L.tHnoq10Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqzimWXuarVLoPqqtXtKfxFliye2LDvZTJJZW72I3uE2eCmDUesei5iN1EH1BPPH1yQ!!/mnull&bo=xgLGAgAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.95){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8ncN1PxDW8m.j*qCBpPIMI2OPS.flq0Zcp3gQ90*CLkZmvdhpah2xMNSbImFApJyg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2.V*CbzCmYkwj6.OkGi297UDriCVmE0dwYOVCgaIpMiTP.1u13igfhK*EaEEHFpnw!!/mnull&bo=egF6AQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}
 					}else if(floidx>=4&&floidx<=8){
 						if(x<=0.6){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqyqcuYnnrftx73ONwRvSCtes5zcvz560jDmAGFZsvPnLxGd5MxfH1cn*L.tHnoq10Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqzimWXuarVLoPqqtXtKfxFliye2LDvZTJJZW72I3uE2eCmDUesei5iN1EH1BPPH1yQ!!/mnull&bo=xgLGAgAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.6&&x<=0.85){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8ncN1PxDW8m.j*qCBpPIMI2OPS.flq0Zcp3gQ90*CLkZmvdhpah2xMNSbImFApJyg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2.V*CbzCmYkwj6.OkGi297UDriCVmE0dwYOVCgaIpMiTP.1u13igfhK*EaEEHFpnw!!/mnull&bo=egF6AQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.85){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq6jYdGy.7KxX8SEjTysGlKR91UoDFH6WPcI4TM1PUQbqAp7bVCUivrhGDS9Pm7G*NA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqwrPCeHI.*yIYcUoTXCh4ObG.TDwrPeA7BMQI58YFS72lmt9ld1aUM6yy78udkeCOw!!/mnull&bo=TQJ3AgAAAAADBxg!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}
 					}else if(floidx>=9&&floidx<=10){
 						if(x<=0.999){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.4w81BWUnLsxg13yvScF7o2u**PDamNVx*Z4VY3XUfw2ZDCRmYtisTHpGygzexrfw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq4*227uDpDgsh1nc*8Yi4XVmCJHF3YHw6Qtnc5YOBoxEuuL9ENuLsh2jjMEg29n3tQ!!/mnull&bo=rgGuAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.999){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5*FaggUySDnWeh*zj3cjGBICNsgFbJ6R*sai76LUFvETtwaloIFPSO8YaW2nJWsvQ!!/mnull&bo=qgGpAQAAAAADByE!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}
 					}else if(floidx>=11&&floidx<=14){
 						if(x<=0.3){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqyqcuYnnrftx73ONwRvSCtes5zcvz560jDmAGFZsvPnLxGd5MxfH1cn*L.tHnoq10Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqzimWXuarVLoPqqtXtKfxFliye2LDvZTJJZW72I3uE2eCmDUesei5iN1EH1BPPH1yQ!!/mnull&bo=xgLGAgAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.3&&x<=0.55){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8ncN1PxDW8m.j*qCBpPIMI2OPS.flq0Zcp3gQ90*CLkZmvdhpah2xMNSbImFApJyg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2.V*CbzCmYkwj6.OkGi297UDriCVmE0dwYOVCgaIpMiTP.1u13igfhK*EaEEHFpnw!!/mnull&bo=egF6AQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.55&&x<=0.8){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq6jYdGy.7KxX8SEjTysGlKR91UoDFH6WPcI4TM1PUQbqAp7bVCUivrhGDS9Pm7G*NA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqwrPCeHI.*yIYcUoTXCh4ObG.TDwrPeA7BMQI58YFS72lmt9ld1aUM6yy78udkeCOw!!/mnull&bo=TQJ3AgAAAAADBxg!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.8&&x<=0.95){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aqw5hw8FVpD7106DUsTLM3F10o3SUyYCbBgJxh2HxUDT.FN68ObekRPEe61o1yo2.Fg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.DCRxfMbU3cZhfM1gK9EXu1KiHUiboEnkTPQSvnuCzQEz.hnVSlu6V757U47P80lg!!/mnull&bo=rQGtAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.95){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2ZkyhccbGWECCredKj*pEauZsz9kUzITxfu4cljpKYFGju0z4kVzbKnrX1CGQfg1Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq1TulXQTXLDiiqbNG9vZcVbmwISqbVK.HM4PQW3PmKtXwwvHYcfNIRlpkmejWETzvA!!/mnull&bo=rQGtAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}
 					}else if(floidx==15){
 						if(x<=0.98){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.4w81BWUnLsxg13yvScF7o2u**PDamNVx*Z4VY3XUfw2ZDCRmYtisTHpGygzexrfw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq4*227uDpDgsh1nc*8Yi4XVmCJHF3YHw6Qtnc5YOBoxEuuL9ENuLsh2jjMEg29n3tQ!!/mnull&bo=rgGuAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.98){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5*FaggUySDnWeh*zj3cjGBICNsgFbJ6R*sai76LUFvETtwaloIFPSO8YaW2nJWsvQ!!/mnull&bo=qgGpAQAAAAADByE!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}
 					}else if(floidx>=16&&floidx<=19){
 						if(x<=0.2){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqyqcuYnnrftx73ONwRvSCtes5zcvz560jDmAGFZsvPnLxGd5MxfH1cn*L.tHnoq10Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqzimWXuarVLoPqqtXtKfxFliye2LDvZTJJZW72I3uE2eCmDUesei5iN1EH1BPPH1yQ!!/mnull&bo=xgLGAgAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.2&&x<=0.4){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8ncN1PxDW8m.j*qCBpPIMI2OPS.flq0Zcp3gQ90*CLkZmvdhpah2xMNSbImFApJyg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2.V*CbzCmYkwj6.OkGi297UDriCVmE0dwYOVCgaIpMiTP.1u13igfhK*EaEEHFpnw!!/mnull&bo=egF6AQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.4&&x<=0.6){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq6jYdGy.7KxX8SEjTysGlKR91UoDFH6WPcI4TM1PUQbqAp7bVCUivrhGDS9Pm7G*NA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqwrPCeHI.*yIYcUoTXCh4ObG.TDwrPeA7BMQI58YFS72lmt9ld1aUM6yy78udkeCOw!!/mnull&bo=TQJ3AgAAAAADBxg!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.6&&x<=0.8){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aqw5hw8FVpD7106DUsTLM3F10o3SUyYCbBgJxh2HxUDT.FN68ObekRPEe61o1yo2.Fg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.DCRxfMbU3cZhfM1gK9EXu1KiHUiboEnkTPQSvnuCzQEz.hnVSlu6V757U47P80lg!!/mnull&bo=rQGtAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.8){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2ZkyhccbGWECCredKj*pEauZsz9kUzITxfu4cljpKYFGju0z4kVzbKnrX1CGQfg1Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq1TulXQTXLDiiqbNG9vZcVbmwISqbVK.HM4PQW3PmKtXwwvHYcfNIRlpkmejWETzvA!!/mnull&bo=rQGtAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}
 					}else if(floidx==20){
 						if(x<=0.9){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.4w81BWUnLsxg13yvScF7o2u**PDamNVx*Z4VY3XUfw2ZDCRmYtisTHpGygzexrfw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq4*227uDpDgsh1nc*8Yi4XVmCJHF3YHw6Qtnc5YOBoxEuuL9ENuLsh2jjMEg29n3tQ!!/mnull&bo=rgGuAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.9){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5*FaggUySDnWeh*zj3cjGBICNsgFbJ6R*sai76LUFvETtwaloIFPSO8YaW2nJWsvQ!!/mnull&bo=qgGpAQAAAAADByE!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}
 					}else if(floidx>=21&&floidx<=24){
 						if(x<=0.3){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aqw5hw8FVpD7106DUsTLM3F10o3SUyYCbBgJxh2HxUDT.FN68ObekRPEe61o1yo2.Fg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.DCRxfMbU3cZhfM1gK9EXu1KiHUiboEnkTPQSvnuCzQEz.hnVSlu6V757U47P80lg!!/mnull&bo=rQGtAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.3&&x<=0.6){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2ZkyhccbGWECCredKj*pEauZsz9kUzITxfu4cljpKYFGju0z4kVzbKnrX1CGQfg1Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq1TulXQTXLDiiqbNG9vZcVbmwISqbVK.HM4PQW3PmKtXwwvHYcfNIRlpkmejWETzvA!!/mnull&bo=rQGtAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.6&&x<=0.8){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqzfPdQOrJBUlSWHxBpDP.RWYdr6bUvURfnF6FVvr3x73eaK0QZLAMef4Slr7j9Pkqg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8P4ETaYihwkQVBvBNlrXuShQ9.7qx6mXEbHj40OFBKdPrvaYHgnw2COZWOD.UpAiw!!/mnull&bo=ZAJkAgAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.8&&x<=0.895){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.4w81BWUnLsxg13yvScF7o2u**PDamNVx*Z4VY3XUfw2ZDCRmYtisTHpGygzexrfw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq4*227uDpDgsh1nc*8Yi4XVmCJHF3YHw6Qtnc5YOBoxEuuL9ENuLsh2jjMEg29n3tQ!!/mnull&bo=rgGuAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.895&&x<=0.9){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5*FaggUySDnWeh*zj3cjGBICNsgFbJ6R*sai76LUFvETtwaloIFPSO8YaW2nJWsvQ!!/mnull&bo=qgGpAQAAAAADByE!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.9){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5lvU8eEqlOqEit0RjKnb*EV*vHpzZ6NGTQ6GqUBdNtyxi0RwiX1m8xpylanKynBTA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq1qFRV4niVYsIJU2Z.KaIdlDbQEXZbBviJWgSnniGrzltt45172by0mxHfy5ZsAgig!!/mnull&bo=fwJ*AgAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}
 					}else if(floidx>=25&&floidx<=27){
 						if(x<=0.2){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq2ZkyhccbGWECCredKj*pEauZsz9kUzITxfu4cljpKYFGju0z4kVzbKnrX1CGQfg1Q!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq1TulXQTXLDiiqbNG9vZcVbmwISqbVK.HM4PQW3PmKtXwwvHYcfNIRlpkmejWETzvA!!/mnull&bo=rQGtAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.2&&x<=0.4){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqzfPdQOrJBUlSWHxBpDP.RWYdr6bUvURfnF6FVvr3x73eaK0QZLAMef4Slr7j9Pkqg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8P4ETaYihwkQVBvBNlrXuShQ9.7qx6mXEbHj40OFBKdPrvaYHgnw2COZWOD.UpAiw!!/mnull&bo=ZAJkAgAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.4&&x<=0.6){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5lvU8eEqlOqEit0RjKnb*EV*vHpzZ6NGTQ6GqUBdNtyxi0RwiX1m8xpylanKynBTA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq1qFRV4niVYsIJU2Z.KaIdlDbQEXZbBviJWgSnniGrzltt45172by0mxHfy5ZsAgig!!/mnull&bo=fwJ*AgAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.6&&x<=0.75){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq.4w81BWUnLsxg13yvScF7o2u**PDamNVx*Z4VY3XUfw2ZDCRmYtisTHpGygzexrfw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq4*227uDpDgsh1nc*8Yi4XVmCJHF3YHw6Qtnc5YOBoxEuuL9ENuLsh2jjMEg29n3tQ!!/mnull&bo=rgGuAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.75&&x<=0.8){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5*FaggUySDnWeh*zj3cjGBICNsgFbJ6R*sai76LUFvETtwaloIFPSO8YaW2nJWsvQ!!/mnull&bo=qgGpAQAAAAADByE!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.8&&x<=0.9){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq0fQMuXeH1KWAiQqobyyD6xDOehtPLNwd5ERlse7wiqtfMfcHKqyAFFjG0V9QnBh0A!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8dpMrjPSRINlsCzYKFoBN*j5zs26wFDw8o5SrfdbIbijucEG0GQ7E.HnQk9wBEiWw!!/mnull&bo=iQGJAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.9){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxgrHlUGfsibUffq2A9PDDLcFK5aNYMQN3*PvxfN1du0QnWe2cnmUSa3Z8V9E*aZxg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8jw9zun3NSzwhQsg6SPVZaTHXKRhA88JYyisb3o0NrOyEIkoC.5ZB3vePqyKKi4kg!!/mnull&bo=7QLtAgAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}
 					}else if(floidx==28){
 						if(x<=0.7){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq0fQMuXeH1KWAiQqobyyD6xDOehtPLNwd5ERlse7wiqtfMfcHKqyAFFjG0V9QnBh0A!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8dpMrjPSRINlsCzYKFoBN*j5zs26wFDw8o5SrfdbIbijucEG0GQ7E.HnQk9wBEiWw!!/mnull&bo=iQGJAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.7){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5*FaggUySDnWeh*zj3cjGBICNsgFbJ6R*sai76LUFvETtwaloIFPSO8YaW2nJWsvQ!!/mnull&bo=qgGpAQAAAAADByE!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}
 					}else if(floidx==29){
 						if(x<=0.7){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxgrHlUGfsibUffq2A9PDDLcFK5aNYMQN3*PvxfN1du0QnWe2cnmUSa3Z8V9E*aZxg!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq8jw9zun3NSzwhQsg6SPVZaTHXKRhA88JYyisb3o0NrOyEIkoC.5ZB3vePqyKKi4kg!!/mnull&bo=7QLtAgAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}else if(x>0.7){
-							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxvwHow5wuH9MHrS*JWJ9icNRwsPyzfeGGp5eBrE4zPYIZ85ewfc.rGfMppFCS2exw!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+							zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5*FaggUySDnWeh*zj3cjGBICNsgFbJ6R*sai76LUFvETtwaloIFPSO8YaW2nJWsvQ!!/mnull&bo=qgGpAQAAAAADByE!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 						}
 					}else if(floidx==30){
-						zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq0HkSTz531PCOu*PaK11iriW025VAd9Bo3G6YUpnpvoQ59S.QCLrZEGx*ok*Hc2zJA!!/mnull&bo=OASABwAAAAADB5k!&rf=photolist&t=5";
+						zhonglei="http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5ATuul3xUc8iubttJRnz84iFjCaoBHsx*DM*v*gdGFlDJomzFu00KQoOHYc1tH1mg!!/mnull&bo=JAEkAQAAAAADByI!&rf=photolist&t=5";
 							this.ihave(zhonglei);
 					}
 					
@@ -517,7 +517,38 @@
 					success:function(){
 						console.log("更新todayFlo成功")
 					}
-				})
+				});
+				
+				wx.cloud.callFunction({
+					name:'myFunction',
+					success:function(res){
+						that.$store.state.userid=res.result.openid;
+						console.log("用户凭证获取成功");
+						const db=wx.cloud.database();
+						const appU=db.collection('appUsers');
+						appU.where({
+							_openid:that.$store.state.userid
+						})
+						.get({
+							success:function(res){
+								if(res.data.length==0){
+									console.log("未找到相应记录");
+									appU.add({
+										data:{
+											todayFlo:[],
+											hasFlo:[],
+											floNum:[0,0,0,0,0,0,0,0,0,0,0,0]
+										}
+									})
+								}else{
+									console.log("找到了相应记录");
+									console.log(res.data[0]);
+									that.$store.state.userData=res.data[0];
+								}
+							}
+						});
+					}
+				});
 			},
 			ihave:function(e){	/* 检测拥有过的花,如本花是第一次获得的,则存入数据库,以解锁图鉴 */
 				var that=this;
@@ -622,181 +653,181 @@
 	.area0{
 		bottom: 2vh;
 		left: 10rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 29;
 	}
 	.area1{
 		bottom: 3vh;
 		left: 115rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 28;
 	}
 	.area2{
 		bottom: 1vh;
 		left: 212rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 30;
 	}
 	.area3{
 		bottom: 5vh;
 		left: 300rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 24;
 	}
 	.area4{
 		bottom: 3vh;
 		left: 405rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 27;
 	}
 	.area5{
 		bottom: 4vh;
 		left: 520rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 26;
 	}
 	.area6{
 		bottom: 4vh;
 		left: 640rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 25;
 	}
 	.area7{
 		bottom: 12vh;
 		left: 8rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 21;
 	}
 	.area8{
 		bottom: 13vh;
 		left: 100rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 19;
 	}
 	.area9{
 		bottom: 11vh;
 		left: 190rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 22;
 	}
 	.area10{
 		bottom: 14vh;
 		left: 275rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 18;
 	}
 	.area11{
-		bottom: 10vh;
+		bottom: 100rpx;
 		left: 380rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 23;
 	}
 	.area12{
 		bottom: 12vh;
 		left: 480rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 20;
 	}
 	.area13{
 		bottom: 15vh;
 		left: 570rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 16;
 	}
 	.area14{
 		bottom: 14vh;
 		left: 650rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 17;
 	}
 	.area15{
 		bottom: 24vh;
 		left: 14rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 12;
 	}
 	.area16{
 		bottom: 22vh;
 		left: 120rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 14;
 	}
 	.area17{
 		bottom: 21vh;
 		left: 225rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 15;
 	}
 	.area18{
 		bottom: 23vh;
 		left: 345rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 13;
 	}
 	.area19{
 		bottom: 24vh;
 		left: 470rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 11;
 	}
 	.area20{
 		bottom: 25vh;
 		left: 605rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 10;
 	}
 	.area21{
 		bottom: 33vh;
 		left: 20rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 7;
 	}
 	.area22{
 		bottom: 34vh;
 		left: 150rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 5;
 	}
 	.area23{
 		bottom: 33vh;
 		left: 280rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 6;
 	}
 	.area24{
 		bottom: 31vh;
 		left: 410rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 9;
 	}
 	.area25{
 		bottom: 33vh;
 		left: 580rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 8;
 	}
 	.area26{
 		bottom: 41vh;
 		left: 50rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 4;
 	}
 	.area27{
 		bottom: 42vh;
 		left: 200rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 3;
 	}
 	.area28{
 		bottom: 43vh;
 		left: 400rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 1;
 	}
 	.area29{
 		bottom: 42vh;
 		left: 590rpx;
-		height: 10vh;
+		height: 100rpx;
 		z-index: 2;
 	}
 </style>
