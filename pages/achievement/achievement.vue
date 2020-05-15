@@ -233,8 +233,10 @@
 		border-radius: 8rpx;
 		border-width: 3rpx;
 		border-style: outset;
-		margin-top: 35rpx;
-		margin-left: 116rpx;
+		margin-left: 80rpx;
+		margin-top: 30rpx;
+		/* margin-top: 35rpx;
+		margin-left: 116rpx; */
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -262,7 +264,6 @@
 		align-items: center;
 		width: 750rpx;
 		height: auto;
-		margin-top: 100rpx;
-		margin-bottom: 10rpx;
+		margin-top: 50rpx;
 	}
 </style>
