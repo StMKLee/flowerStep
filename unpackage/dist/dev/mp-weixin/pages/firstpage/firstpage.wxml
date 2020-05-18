@@ -1,1 +1,1 @@
-<view><view class="plant"><view data-event-opts="{{[['tap',[['jumpto',['$event']]]]]}}" class="plantin" bindtap="__e">Plant</view></view></view>
+<view><view class="plant"><view class="intxt">FLOWERS STEP</view><view data-event-opts="{{[['tap',[['jumpto',['$event']]]]]}}" class="plantin" bindtap="__e"></view></view></view>

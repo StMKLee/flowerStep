@@ -40,7 +40,7 @@
 				showStep:0,
 				stepclass:"steps",
 				plantnum:null,
-				flowerWidth:150,
+				flowerWidth:180,
 				flowerdonghua:null,
 				flowernum:0,		/* 花数量 */
 				donghuazt:0,		/* 代表动画状态,0是正在变大,1是正在变小 */
@@ -653,181 +653,181 @@
 	.area0{
 		bottom: 2vh;
 		left: 10rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 29;
 	}
 	.area1{
 		bottom: 3vh;
 		left: 115rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 28;
 	}
 	.area2{
 		bottom: 1vh;
 		left: 212rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 30;
 	}
 	.area3{
 		bottom: 5vh;
 		left: 300rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 24;
 	}
 	.area4{
 		bottom: 3vh;
 		left: 405rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 27;
 	}
 	.area5{
 		bottom: 4vh;
 		left: 520rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 26;
 	}
 	.area6{
 		bottom: 4vh;
 		left: 640rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 25;
 	}
 	.area7{
 		bottom: 12vh;
 		left: 8rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 21;
 	}
 	.area8{
 		bottom: 13vh;
 		left: 100rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 19;
 	}
 	.area9{
 		bottom: 11vh;
 		left: 190rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 22;
 	}
 	.area10{
 		bottom: 14vh;
 		left: 275rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 18;
 	}
 	.area11{
 		bottom: 100rpx;
 		left: 380rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 23;
 	}
 	.area12{
 		bottom: 12vh;
 		left: 480rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 20;
 	}
 	.area13{
 		bottom: 15vh;
 		left: 570rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 16;
 	}
 	.area14{
 		bottom: 14vh;
 		left: 650rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 17;
 	}
 	.area15{
 		bottom: 24vh;
 		left: 14rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 12;
 	}
 	.area16{
 		bottom: 22vh;
 		left: 120rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 14;
 	}
 	.area17{
 		bottom: 21vh;
 		left: 225rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 15;
 	}
 	.area18{
 		bottom: 23vh;
 		left: 345rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 13;
 	}
 	.area19{
 		bottom: 24vh;
 		left: 470rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 11;
 	}
 	.area20{
 		bottom: 25vh;
 		left: 605rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 10;
 	}
 	.area21{
 		bottom: 33vh;
 		left: 20rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 7;
 	}
 	.area22{
 		bottom: 34vh;
 		left: 150rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 5;
 	}
 	.area23{
 		bottom: 33vh;
 		left: 280rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 6;
 	}
 	.area24{
 		bottom: 31vh;
 		left: 410rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 9;
 	}
 	.area25{
 		bottom: 33vh;
 		left: 580rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 8;
 	}
 	.area26{
 		bottom: 41vh;
 		left: 50rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 4;
 	}
 	.area27{
 		bottom: 42vh;
 		left: 200rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 3;
 	}
 	.area28{
 		bottom: 43vh;
 		left: 400rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 1;
 	}
 	.area29{
 		bottom: 42vh;
 		left: 590rpx;
-		height: 100rpx;
+		height: 120rpx;
 		z-index: 2;
 	}
 </style>

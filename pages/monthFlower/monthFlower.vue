@@ -9,7 +9,9 @@
 		<view class="num sum">
 			近31天总花数：{{sumflowers}}
 		</view>
-		
+		<view class="hudie yi">　</view>
+		<view class="hudie er">　</view>
+		<view class="hudie san">　</view>
 	</view>
 </template>
 
@@ -37,13 +39,7 @@
 page{
 	background-color: #FEFEFF;
 	color: #33A6B8;
-	/* 无版权背景图 */
-	/* background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587389110729&di=b69d906bb7362a55d764fb6f71b8eb0a&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F3701ee4cc4844e0e16e3d9128329579ec1dc5f31429f6-N8dnhq_fw658");
-	background-repeat: no-repeat;
-	background-size: 100% 80%;
-	background-position: bottom; */
-	/* 免费版权背景图 */
-	background-image: url("https://images.pexels.com/photos/2395251/pexels-photo-2395251.jpeg?cs=srgb&dl=pexels-2395251.jpg&fm=jpg");
+	background-image: url("http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq5HNSVX25goy4D2H01x4RAeJMA0wrxTFExzdY6JZedr4By8Zw5dxkK4Xx9hkEI0KYw!!/b&bo=OARSBgAAAAARB1g!&rf=viewer_4");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-position: bottom;
@@ -57,5 +53,28 @@ page{
 .num{
 	font-size: 30rpx;
 	margin-left: 15rpx;
+}
+.hudie{
+	position: absolute;
+	width: 200rpx;
+	height: 200rpx;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	opacity: 0.6;
+}
+.yi{
+	background-image: url("http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq6q0rOoU5bzEtyBAVWVUCjjaWXUc0mWj81AclE7RJML9NqWshc9SxAXSVy3kTb0fxw!!/b&bo=0ALQAgAAAAACByM!&rf=viewer_4");
+	top: 10vh;
+	left: 450rpx;
+}
+.er{
+	background-image: url("http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq1opfl21nZeWid5f2.QqlLSArRBTwS5f1Rm561QANrOqxdFIwmyfQylB2VmZNnUyng!!/b&bo=0ALQAgAAAAACByM!&rf=viewer_4");
+	top: 30vh;
+	left: 50rpx;
+}
+.san{
+	background-image: url("http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqxaVLpF4cXOpAU.3PeGKD*vpUClEFyKq9Di1.7O9QURHqfG1B2qWVwKhQe5xhDVB2w!!/b&bo=0ALQAgAAAAACByM!&rf=viewer_4");
+	top: 60vh;
+	left: 550rpx;
 }
 </style>
