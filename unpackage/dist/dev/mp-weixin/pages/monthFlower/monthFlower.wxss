@@ -27,8 +27,8 @@ page{
 }
 .yi{
 	background-image: url("http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq6q0rOoU5bzEtyBAVWVUCjjaWXUc0mWj81AclE7RJML9NqWshc9SxAXSVy3kTb0fxw!!/b&bo=0ALQAgAAAAACByM!&rf=viewer_4");
-	top: 10vh;
-	left: 450rpx;
+	top: 9vh;
+	left: 460rpx;
 }
 .er{
 	background-image: url("http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4Aq1opfl21nZeWid5f2.QqlLSArRBTwS5f1Rm561QANrOqxdFIwmyfQylB2VmZNnUyng!!/b&bo=0ALQAgAAAAACByM!&rf=viewer_4");

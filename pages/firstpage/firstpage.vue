@@ -46,7 +46,7 @@ page{
 	align-items: center;
 }
 .plantin{
-	margin-top: 65rpx;
+	margin-top: 100rpx;
 	width: 230rpx;
 	height: 170rpx;
 	background-image: url("http://m.qpic.cn/psc?/V103RcfH49cCwd/N6ix9ropXhYRy3eob.4AqwozVg0XITGwKqq2rMzpGeTzl4lX3MQ8Kijkmt098RJIoyQNqhdu8U2pnYRZdWkl2g!!/mnull&bo=OAQ4BAAAAAADByI!&rf=photolist&t=5");
